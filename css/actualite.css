@@ -1,0 +1,342 @@
+/*Mise a jour general*/
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/fond_et_illustraction/fond/fond.png);
+    background-size:cover;
+}
+main{
+    padding: 50px;
+}
+/*fin mise a jour general*/
+/*En tete*/
+header{
+    display: flex;
+    flex-direction: column;
+    height: 160px;    
+}
+.barnoir{
+    width: 100%;
+    background-color: black;
+    height: 50%;
+}
+.logo{
+    height: 40px;
+    position: relative;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo img{
+    height: 100%;
+    position: relative;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.barblanche{
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    width: 100%;
+
+}
+.barblanche nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.barblanche nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.barblanche nav ul a{
+    text-decoration: none;
+    color: black;
+}
+.button_lien{
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button_lien a{
+    color: white;
+    text-decoration: none;
+   
+}
+ /*En tete fin*/
+
+ /*bannier*/
+#bannier{
+    width: 100%;
+    margin-bottom: 100px;
+}
+#bannier .top h1{
+    font-size: 55px;
+    font-weight: normal;
+}
+#bannier .top h1 span{
+    font-weight: bold;
+}
+#bannier .top p{
+    font-size: 30px;
+    text-align: justify;
+    opacity: 75%;
+}
+#bannier .bottom{
+    width: 100%;
+}
+#bannier .bottom img{
+    width: 100%;
+}
+/*fin bannier*/
+
+/*Actualite*/
+.actualite{
+    margin-top: 50px;
+    width: 100%;
+}
+.actualite h1{
+    margin-bottom: 50px ;
+    font-size: 48px;
+}
+.actualite h1 span{
+    font-weight: mormal;
+    font-size: 40px;
+}
+.conteneur{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card{
+    width: 420px;
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+}
+.photo_de_larticle{
+    height: 400px;
+    width: 90%;
+}
+.photo_de_larticle img{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;   
+}
+.titre_sous_titre{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+    gap: 4px;
+}
+.titre_sous_titre h3{
+    font-size: 15px;
+    margin: 0;
+}
+.titre_sous_titre p{
+    font-size: 15px;
+    margin: 0;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.detail p{
+    width: 90%;
+    text-align: justify;
+}
+.bas_du_card{
+    width: 90%;
+    height: 20px;
+}
+.telecharger{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    float: left;
+}
+.icon{
+    height: 100%;
+}
+.icon img{
+    height: 100%;
+}
+.autr{
+    margin-right: 30px;
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    float:right;
+}
+.autr img{
+    height: 100%;
+}
+/*actualite fin*/
+
+.Galerie{
+    margin-top: 50px;
+
+    width: 100%;
+}
+.Galerie h1{
+    margin-bottom: 50px ;
+    font-size: 48px;
+}
+.Galerie h1 span{
+    font-weight: mormal;
+    font-size: 40px;
+}
+
+.galerie .tranp{
+    position: absolute;
+    background-image: url(/images/Personnages/photoActulite/fond.png);
+    background-size: cover;
+    margin-top: 0px;
+    left: 115px;
+    height: 83%;
+    width: 90%;
+    
+}
+.galerie .tranp .conten{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 50px;
+    height: 100%;
+    width: 50%;
+    
+}
+.galerie .tranp h1{
+    margin: 0;
+}
+.galerie .tranp p{
+    font-size: 30px;
+    width: 45%;
+}
+.galerie .tranp .telechargement{
+    background-color: black;
+    display: flex;
+    gap: 20%;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    padding: 0 20px;
+}
+.galerie .tranp .telechargement:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.galerie .tranp .telechargement img{
+    height: 20px;
+}
+.galerie .tranp .telechargement p{
+    color: white;
+    font-size: 20px;
+    width: 100%;
+}
+.galerie .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+.galerie .images img{
+    height: 300px;
+    object-fit: cover;
+
+
+}
+
+
+ /* footer */
+ footer{
+    background-color: white;
+    height: 260px;
+    width: 100%;
+}
+footer .conteneurf{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    padding: 0px;
+}
+.conteneurf .gauche {
+    width: 250px;
+    height: 90%;
+    text-align: center;
+    color: black;
+}
+.conteneurf .gauche .logo{
+    position: relative;
+    height: 100px;
+    background-color: black;
+    top: 55px;
+}
+.conteneurf .gauche .logo img{
+    height: 40%;
+}
+.conteneurf .gauche .resaux{
+
+    position: relative;
+    top: 80px;
+    display: flex;
+    height: 20px;
+    gap: 20px;
+    left: 20px;
+}
+.conteneurf .gauche .resaux img{
+    height: 100%;
+}
+.conteneurf .centre {
+    height: 90%;
+    width: 300px;
+    text-align: center;
+    color: black;
+   
+}
+.conteneurf .droite{
+    width: 200px;
+    height: 90%;
+    text-align: center;
+    color: black;
+}
+.conteneurf .horaire{
+    height: 90%;
+    width: 250px;
+    padding-right: 35px;
+    text-align: center;
+    color: black; 
+}
+.conteneurf p{
+    display: block;
+}
+.conteneurf a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+/*footer fin*/
+    

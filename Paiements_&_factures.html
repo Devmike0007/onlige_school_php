@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Paiements_&_factures.css">
+    <title>mon enfant</title>
+</head>
+<body>
+    <main>
+        <section class="gauche">
+            <div class="top">
+                <img src="./images/fond_et_illustraction/illustration/Logo.png" alt="logo">
+            </div>
+            <div class="center">
+                <div class="balise">
+                    <a href="mon_enfants.html">
+                        <img src="./images/Personnages/monenfant/icon/utilisateur.png" alt="">
+                        <p>Mon enfant</p>
+                    </a>
+                </div>
+                <div class="balise">
+                    <a href="Résultat_&_Bulletin.html">
+                        <img src="./images/Personnages/monenfant/icon/notes.png" alt="">
+                        <p>Résultat & Bulletin</p>
+                     </a>
+                </div>
+                <div class="balise">
+                    <a href="Emploi_du_Temps.html">
+                        <img src="./images/Personnages/monenfant/icon/calendrier.png" alt="">
+                        <p>Emploi du Temps</p>
+                    </a>
+                </div>
+                <div class="balise">
+                    <a href="Documents_officiels.html">
+                        <img src="./images/Personnages/monenfant/icon/collection.png" alt="">
+                        <p>Documents officiels</p>
+                    </a>
+                </div>
+                <div class="balise">
+                    <a href="Messagerie.html">
+                        <img src="./images/Personnages/monenfant/icon/utilisateur.png" alt="">
+                        <p>Messagerie</p>
+                    </a>
+                </div>
+                <div class="balise">
+                    <a href="Agenda_scolaire.html">
+                        <img src="./images/Personnages/monenfant/icon/agenda.png" alt="">
+                        <p>Agenda scolaire</p>
+                    </a>
+                </div>
+                <div class="balise un">
+                    <a href="Paiements_&_factures.html">
+                        <img src="./images/Personnages/monenfant/icon/billets-dargent.png" alt="">
+                        <p>Paiements & factures</p>
+                    </a>
+                </div>
+
+            </div>
+            <div class="bottom">
+                <div class="resaux">
+                    <a href="www.facebook.com"><img src="./images/Personnages/monenfant/icon/facebook.png" alt="facebook"></a>
+                    <a href="www.linkedin.com"><img src="./images/Personnages/monenfant/icon/logo-linkedin.png" alt="facebook"></a>
+                    <a href="www.youtube.com"><img src="./images/Personnages/monenfant/icon/youtube.png" alt="facebook"></a>
+                    <a href="www.instagram.com"><img src="./images/Personnages/monenfant/icon/instagram.png" alt="facebook"></a>
+                </div>
+            </div>
+
+        </section>
+        <section class="centre">
+            <div class="top">
+                <p>Bienvenue, Mr.Kayembe</p>
+                <input type="button" value="Déconnexion" class="deco">
+            </div>
+            <div class="centre">
+                <div class="container">
+
+                    <h2>💳 Effectuer un paiement</h2>
+                  
+                    <!-- Formulaire de paiement -->
+                    <form class="paiement-form">
+                      <label for="nom">Nom de l’enfant :</label>
+                      <input type="text" id="nom" name="nom" placeholder="Ex: Junior Kalala">
+                  
+                      <label for="tranche">Tranche à payer :</label>
+                      <select id="tranche" name="tranche">
+                        <option>1ère Tranche - 100.000 FC</option>
+                        <option>2ème Tranche - 100.000 FC</option>
+                        <option>3ème Tranche - 100.000 FC</option>
+                      </select>
+                  
+                      <label for="methode">Méthode de paiement :</label>
+                      <select id="methode" name="methode">
+                        <option>Airtel</option>
+                        <option>Orange</option>
+                        <option>Vodacom</option>
+                      </select>
+                  
+                      <button type="submit">Payer maintenant</button>
+                    </form>
+                  
+                    <!-- Historique des paiements -->
+                    <div class="historique">
+                      <h3>🧾 Historique de vos tranches</h3>
+                  
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Tranche</th>
+                            <th>Montant</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1ère Tranche</td>
+                            <td>100.000 FC</td>
+                            <td>05/03/2025</td>
+                            <td class="paid">Payée</td>
+                          </tr>
+                          <tr>
+                            <td>2ème Tranche</td>
+                            <td>100.000 FC</td>
+                            <td>-</td>
+                            <td class="unpaid">À payer</td>
+                          </tr>
+                          <tr>
+                            <td>3ème Tranche</td>
+                            <td>100.000 FC</td>
+                            <td>-</td>
+                            <td class="unpaid">À payer</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                  </div>
+                  
+            </div>
+        </section>
+    </main>
+</body>
+</html>

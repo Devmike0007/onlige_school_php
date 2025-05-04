@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/fond_et_illustraction/fond/fond.png);
+    background-size:cover;
+}
+main{
+    display: flex;
+}
+/*Barre gauche en noir */
+.gauche{
+    position: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.gauche .center{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    color: white;
+    margin-left: 30px; 
+}
+.un{
+    background-color: rgba(255, 255, 255, 0.425);
+}
+.center .balise a{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    gap: 20px;
+    text-decoration: none;
+    color: white;
+} 
+.balise :hover{
+    background-color: rgba(255, 255, 255, 0.425);
+
+}
+.center  img{
+    height: 100%;
+}
+.gauche .top{
+    background-color: rgba(0, 0, 0, 0.627);
+    height: 40px;
+    margin-left: 30px; 
+
+} 
+.top img{
+    height: 100%;
+}
+.resaux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    gap: 20px;
+    position: fixed;
+    top: 720px;
+    margin-left: 30px; 
+}.resaux a{
+    height: 25px;
+}
+.resaux img{
+    height: 100%;
+    opacity: 80%;
+}
+
+/*fin de la Barre gauche en noir */
+.centre{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    gap: 10px;
+}
+.centre .top{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.627);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    z-index: 2000;
+}
+.top p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 30px; 
+    margin-top: 10px; 
+}
+.top input{
+    background-color: rgba(255, 250, 250, 0.627);
+    color: rgb(0, 0, 0);
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-left: 30px; 
+    margin-top: 10px; 
+    cursor: pointer;
+    border-radius: 4px;
+}
+.top input:hover{
+    background-color: rgba(255, 255, 255, 0.425);
+
+}
+
+.container {
+
+    width: 50%;
+    height: 90%;
+    margin-top: 75px;
+    margin-left: 350px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  input, textarea, select {
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .send-message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: left;
+  }
+  .message-box {
+
+    background: #f1f1f1;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .received {
+    background: #dfefff;
+  }
+  
+  .sent {
+    background: #dcf8c6;
+    text-align: right;
+  }
+  

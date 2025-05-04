@@ -1,0 +1,483 @@
+/*Mise a jour general*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/fond_et_illustraction/fond/fond.png);
+    background-size:cover;
+}
+main{
+    padding: 50px;
+}
+/*fin mise a jour general*/
+
+/*En tete*/
+header{
+    display: flex;
+    flex-direction: column;
+    height: 160px;    
+}
+.barnoir{
+    width: 100%;
+    background-color: black;
+    height: 50%;
+}
+.logo{
+    height: 40px;
+    position: relative;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo img{
+    height: 100%;
+    position: relative;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.barblanche{
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    width: 100%;
+
+}
+.barblanche nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.barblanche nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.barblanche nav ul a{
+    text-decoration: none;
+    color: black;
+}
+.button_lien{
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button_lien a{
+    color: white;
+    text-decoration: none;
+   
+}
+/*fin en tete*/
+
+/*banniere*/
+.banniere{
+    width: 100%;
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1px;  
+    margin-bottom: 100px;
+}
+/*gauche*/
+.gauche {
+    float: left;
+    width: 55%;
+}
+.gauche h1{
+    font-size: 50px;
+}
+.gauche p{
+    font-size: 30px;
+    width: 85%;
+    
+}
+.bouton{
+    background-color: black;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+
+}
+.bouton a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+}
+/*droite*/
+.droite{
+    float: right;
+    width: 40%;
+    height: 115%;
+}
+.droite .photo{
+    height: 100%;
+}
+.droite .photo img{
+    height: 100%;
+}
+/*fin banniere*/
+/*barre_de_navigation*/
+.barre_de_navigation{
+    display: none;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    left: 0;
+    top: 20px;
+
+    
+}
+.barre_de_navigation ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    align-items: center;
+}
+.barre_de_navigation ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+/*fin barre_de_navigation*/
+
+/*Actualite*/
+.actualite{
+    margin-top: 250px;
+    width: 100%;
+}
+.actualite h1{
+    margin-bottom: 50px ;
+    font-size: 48px;
+}
+.conteneur{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card{
+    width: 420px;
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+}
+.photo_de_larticle{
+    height: 340px;
+}
+.photo_de_larticle img{
+    height: 100%;
+    border-radius: 8px;   
+}
+.titre_sous_titre{
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 4px;
+}
+.titre_sous_titre h3{
+    font-size: 15px;
+    margin: 0;
+}
+.titre_sous_titre p{
+    font-size: 15px;
+    margin: 0;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.detail p{
+    width: 90%;
+    text-align: justify;
+}
+.bas_du_card{
+    width: 90%;
+    height: 20px;
+}
+.telecharger{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    float: left;
+}
+.icon{
+    height: 100%;
+}
+.icon img{
+    height: 100%;
+}
+.autr{
+    margin-right: 30px;
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    float:right;
+}
+.autr img{
+    height: 100%;
+}
+.telecharger a{
+    text-decoration: none;
+    color: black;
+}
+/*actualite fin*/
+
+/*Apropos*/
+.Apropos{
+    margin-top: 350px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+.Apropos .gauche h1{
+    margin-top: 0;
+}
+.Apropos .gauche .premierbloc p{
+    text-align: justify;
+    font-size: 25px;
+}
+.Apropos .gauche .deuxiemebloc p{
+    text-align: justify;
+    font-size: 25px;
+}
+.Apropos .gauche a{
+    padding: 10px 25px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+.Apropos .droite{
+    height: 650px;
+    width: 45%;
+    float: right;
+}
+.Apropos .droite img{
+    height: 100%;
+}
+/*fin Apropos*/
+/*temoignage*/
+.temoignage{
+    width: 100;
+    margin-top: 250px;
+}
+.temoignage h1{
+    font-size: 42px;
+}
+.temoignage .conteneur{
+    gap: 15px;
+}
+.block{
+    height: 150px;
+    width: 360px;
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.096);
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.phots{
+    height: 50px;
+    width: 50px;
+}
+.pht{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.name{
+
+}
+.name h2{
+    margin: 0;
+}
+.name p{
+    margin: 0;
+}
+/*temoignage fin*/
+/*contact*/
+.contact{
+    margin-top: 200px;
+    height: 700px;
+    background-color: white;
+    display: flex;
+    gap: 50px;
+
+}
+.contact .gauche{
+    height: 100%;
+    float: left;
+
+    width: 49%;
+}
+.contact .gauche img{
+    height: 100%;
+}
+.contact .droite{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+.contact .droite form{
+    width:80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact .droite form input{
+    height: 25px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.contact .droite form label{
+    font-size: 20x;
+    margin-bottom: 20px;
+    
+}
+.contact .droite form .nom_post{
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact .droite form .message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contact .droite form .message textarea{
+    height: 170px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.contact .droite form input[type="submit"]{
+    margin-top: 20px;
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+/*fin contact*/
+/*barre slog*/
+.bareinscription{
+    background-image: url(/images/fond_et_illustraction/fond/Bande_iscription.png);
+    background-repeat: no-repeat;
+    height: 236px;
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.bareinscription .text{
+    width: 50%;
+    margin-left: 20px;
+}
+.bareinscription .text p{
+    font-size: 20px;
+}
+.bareinscription .text .boutondelafin{
+    height: 15px;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+.bareinscription .text .boutondelafin a{
+    font-size: 20px;
+}
+/*fin barre slog*/
+/*footer*/
+footer{
+    background-color: white;
+    height: 260px;
+    width: 100%;
+}
+footer .conteneurf{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    padding: 0px;
+}
+.conteneurf .gauche {
+    width: 250px;
+    height: 90%;
+    text-align: center;
+    color: black;
+}
+.conteneurf .gauche .logo{
+    position: relative;
+    height: 100px;
+    background-color: black;
+    top: 55px;
+}
+.conteneurf .gauche .logo img{
+    height: 40%;
+}
+.conteneurf .gauche .resaux{
+
+    position: relative;
+    top: 80px;
+    display: flex;
+    height: 20px;
+    gap: 20px;
+    left: 20px;
+}
+.conteneurf .gauche .resaux img{
+    height: 100%;
+}
+.conteneurf .centre {
+    height: 90%;
+    width: 300px;
+    text-align: center;
+    color: black;
+   
+}
+.conteneurf .droite{
+    width: 200px;
+    height: 90%;
+    text-align: center;
+    color: black;
+}
+.conteneurf .horaire{
+    height: 90%;
+    width: 250px;
+    padding-right: 35px;
+    text-align: center;
+    color: black; 
+}
+.conteneurf p{
+    display: block;
+}
+.conteneurf a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+/*footer fin*/
