@@ -8,27 +8,7 @@
     <title>equipe</title>
 </head>
 <body>
-    <header>
-        <div class="barnoir">
-            <div class="logo">
-                <img src="./images/fond_et_illustraction/illustration/Logo.png" alt="logo">
-            </div>
-        </div>
-        <div class="barblanche">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="a_propos.html">A propos</a></li>
-                    <li><a href="equipe.html">Equipe Pédagogique</a></li>
-                    <li><a href="actualite.html">Actualité</a></li>
-                    <li><a href="connexion_mon_enfant.html">Mon enfant</a></li>
-                </ul>
-                <div class="button_lien">
-                    <a href="#">Connexion</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <?php require_once 'includes/header.php'; ?>
     <main>
         <section id="bannier">
             <div class="top">
@@ -60,7 +40,7 @@
                                     <p>Premier -  Troisième</p>
                                 </div>
                             </div>
-                            <p>✅   Développement de la motricité et du langage <br>
+                            <p>✅   Développement de la motricité et du langage<br>
                                 ✅ Initiation à la socialisation et à la vie en communauté <br>
                                 ✅ Stimulation de la curiosité et de la créativité</p>
                         </div>
@@ -74,8 +54,8 @@
                                 <p>Premier - Sixième</p>
                             </div>
                         </div>
-                        <p>✅ Maîtrise des bases : français, maths, sciences  <br>
-                            ✅ Développement de l’autonomie  <br>
+                        <p>✅ Maîtrise des bases : français, maths, sciences <br>
+                            ✅ Développement de l’autonomie <br>
                             ✅ Ouverture à la culture et aux langues</p>
                     </div>
                     <div class="cartecycle">
@@ -88,7 +68,7 @@
                                 <p>Septième - Huitième</p>
                             </div>
                         </div>
-                        <p>✅ Premier cycle : consolidation des acquis <br>
+                        <p>✅ Premier cycle : consolidation des acquis<br>
                             ✅ Deuxième cycle : spécialisation et accompagnement vers l’enseignement</p>
                     </div>
                     <div class="cartecycle">
@@ -101,8 +81,8 @@
                                 <p>Section : Electricité General</p>
                             </div>
                         </div>
-                        <p> ✅ Bases de l’électricité et des circuits <br>
-                            ✅ Logique et résolution de problèmes <br>
+                        <p> ✅ Bases de l’électricité et des circuits<br>
+                            ✅ Logique et résolution de problèmes<br>
                             ✅ Sécurité et usage des équipements</p>
                     </div>
                     <div class="cartecycle">
@@ -115,8 +95,8 @@
                                 <p>Section : Coupe et Couture</p>
                             </div>
                         </div>
-                        <p> ✅ Apprentissage des techniques de base <br>
-                            ✅ Développement de la créativité et du sens esthétique <br>
+                        <p> ✅ Apprentissage des techniques de base<br>
+                            ✅ Développement de la créativité et du sens esthétique<br>
                             ✅ Maîtrise des outils et de la sécurité</p>
                     </div>
                     <div class="cartecycle">
@@ -129,8 +109,8 @@
                                 <p>Section : Scientifique</p>
                             </div>
                         </div>
-                        <p> ✅ Approfondissement des concepts scientifiques de base <br>
-                            ✅ Développement de la méthode expérimentale  <br>
+                        <p> ✅ Approfondissement des concepts scientifiques de base<br>
+                            ✅ Développement de la méthode expérimentale <br>
                             ✅ Encouragement à la curiosité et à l’innovation</p>
                     </div>
                     <div class="cartecycle">
@@ -143,8 +123,8 @@
                                 <p>Section : Commerciale </p>
                             </div>
                         </div>
-                        <p> ✅ Maîtrise des techniques de vente  <br>
-                            ✅ Développement des compétences en négociation  <br>
+                        <p> ✅ Maîtrise des techniques de vente <br>
+                            ✅ Développement des compétences en négociation <br>
                             ✅ Analyse des besoins et gestion de la relation client</p>
                     </div>
                     <div class="cartecycle">
@@ -157,8 +137,8 @@
                                 <p>Section : Math  Physique</p>
                             </div>
                         </div>
-                        <p> ✅ Apprentissage des concepts fondamentaux  <br>
-                            ✅ Développement de la logique et de l’analyse  <br>
+                        <p> ✅ Apprentissage des concepts fondamentaux <br>
+                            ✅ Développement de la logique et de l’analyse <br>
                             ✅ Résolution de problèmes et expérimentations</p>
                     </div>
                     <div class="cartecycle">
@@ -171,8 +151,8 @@
                                 <p>Section : Littéraire </p>
                             </div>
                         </div>
-                        <p> ✅ Analyse et compréhension des textes <br>
-                            ✅ Développement de l’expression écrite et orale <br>
+                        <p> ✅ Analyse et compréhension des textes<br>
+                            ✅ Développement de l’expression écrite et orale<br>
                             ✅ Exploration des genres et courants littéraires</p>
                     </div>
             </div>
@@ -276,7 +256,7 @@
                         <h3>Mme.ADO NSHIMBA</h3>
                         <p><span>Deuxième année de maternelle</span> <br>
                             Cours : Développement moteur global et initiation à 
-                            la communication Description : Exercices de motricité 
+                            la communicationDescription : Exercices de motricité 
                             globale, chants et premières notions de langage.</p>
                     </div>
                 </div>
@@ -288,7 +268,7 @@
                         <h3>Mme. DORCAS KABEDI</h3>
                         <p><span>Troisième  année de maternelle</span><br>
                             Cours : Préparation à l’entrée en primaire 
-                            (pré-lecture, écriture) Description : Activités d’initiation
+                            (pré-lecture, écriture)Description : Activités d’initiation
                              à la lecture et à l’écriture, préparation aux bases scolaires.</p>
                     </div>
                 </div>
@@ -306,7 +286,7 @@
                     <div class="titreetdescription">
                         <h3>Enseignante : Mme. Dorcas ILUNGA</h3>
                         <p> <span>classe : Première année Primaire </span>
-                            Cours : Initiation à la lecture et écriture  <br>
+                            Cours : Initiation à la lecture et écriture <br>
                             Description : Méthodes ludiques pour développer l’alphabétisation.</p>
                     </div>
                 </div>
@@ -317,7 +297,7 @@
                     <div class="titreetdescription">
                         <h3>Enseignant : M. Richard TSHIBANDA</h3>
                         <p><span>classe : Deuxième année Primaire </span> <br>
-                            Cours : Français et mathématiques de base <br>Description : Consolidation des compétences de lecture et des premiers calculs.</p>
+                            Cours : Français et mathématiques de base<br>Description : Consolidation des compétences de lecture et des premiers calculs.</p>
                     </div>
                 </div>
                 <div class="carte">
@@ -327,7 +307,7 @@
                     <div class="titreetdescription">
                         <h3>Enseignante : Mme. Nathalie KANYINDA</h3>
                         <p><span>classe : Troisième année Primaire  </span><br>
-                            Cours : Français, sciences et histoire locale  <br> 
+                            Cours : Français, sciences et histoire locale <br> 
                             Description : Approfondissement du français et introduction aux 
                             sciences naturelles.</p>
                     </div>
@@ -339,7 +319,7 @@
                     <div class="titreetdescription">
                         <h3>Enseignant : M. Jean PONGO</h3>
                         <p> <span>classe : Quatrième année Primaire </span>
-                            Cours : Mathématiques, géographie et sciences <br>
+                            Cours : Mathématiques, géographie et sciences<br>
                             Description : Renforcement des notions mathématiques et découverte du monde.</p>
                     </div>
                 </div>
@@ -350,7 +330,7 @@
                     <div class="titreetdescription">
                         <h3>Enseignante : Mme. Florence MAYELE</h3>
                         <p><span>classe : Cinquième année Primaire</span> <br>
-                            Cours : Préparation à la transition (anglais, arts, informatique)  <br>
+                            Cours : Préparation à la transition (anglais, arts, informatique) <br>
                             Description : Initiation à une langue étrangère et aux arts pour développer la créativité..</p>
                     </div>
                 </div>
@@ -361,7 +341,7 @@
                     <div class="titreetdescription">
                         <h3>Enseignant : M. Daniel ILUNGA</h3>
                         <p><span>classe : Sixième année Primaire </span><br>
-                            Cours : Mathématiques et introduction à la physique <br>
+                            Cours : Mathématiques et introduction à la physique<br>
                             Description : Bases des sciences </p>
                     </div>
                 </div>
@@ -379,7 +359,7 @@
                     <div class="titreetdescription">
                         <h3>C.d'Orientation : Mme Sophie KABILA</h3>
                         <p> <span>Rôle : Accompagnement dans l'orientation scolaire et professionnelle.</span><br>
-                             Description : Guide les élèves dans leurs choix d'avenir.
+                            Description : Guide les élèves dans leurs choix d'avenir.
                     </div>
                 </div>
                 <div class="carte">
@@ -389,7 +369,7 @@
                     <div class="titreetdescription">
                         <h3>Prof. Principal : M. Jean-Michel MBOKO</h3>
                         <p><span>classe : 7e Education de base </span> <br>
-                            Rôle : Mentorat et gestion de la classe.  <br>
+                            Rôle : Mentorat et gestion de la classe. <br>
                             Description : Soutient les élèves dans leur parcours académique.</p>
                     </div>
                 </div>
@@ -400,7 +380,7 @@
                     <div class="titreetdescription">
                         <h3>Prof. Principal : Mme Isabelle TSHIMANGA</h3>
                         <p><span>classe : 8e Education de base</span><br>
-                            Rôle : Mentorat et gestion de la classe.  <br>
+                            Rôle : Mentorat et gestion de la classe. <br>
                             Description : Accompagne les élèves dans leur développement académique et personnel.</p>
                     </div>
                 </div>
@@ -418,9 +398,9 @@
                     <div class="titreetdescription">
                         <h3>Responsable : M. Patrick Nzuzi</h3>
                         <p> <span>Section Électricité</span><br>
-                            Cours : Électricité générale, électrotechnique  <br>
+                            Cours : Électricité générale, électrotechnique <br>
                             Desc. : Installations électriques, maintenance, 
-                            dépannage et conception de systèmes industriels et domestiques. 
+                            dépannage et conception de systèmes industriels et domestiques.
                     </div>
                 </div>
                 <div class="carte">
@@ -430,8 +410,8 @@
                     <div class="titreetdescription">
                         <h3>Responsable : Mme Clarisse Mbombo</h3>
                         <p><span>Section Coupe et Couture</span> <br>
-                            Rôle : Mentorat et gestion de la classe.  <br>
-                            Cours : Stylisme, modélisme, couture  <br>
+                            Rôle : Mentorat et gestion de la classe. <br>
+                            Cours : Stylisme, modélisme, couture <br>
                             Description : Création et confection de vêtements, avec une approche pratique et artistique.</p>
                     </div>
                 </div>
@@ -442,7 +422,7 @@
                     <div class="titreetdescription">
                         <h3>Responsable : M. Jean-Pierre Kalonji</h3>
                         <p><span>Section Scientifique</span><br>
-                            Cours : Biologie, chimie, physique, maths  <br>
+                            Cours : Biologie, chimie, physique, maths <br>
                             Description : Formation axée sur l’analyse scientifique et l’innovation.</p>
                     </div>
                 </div>
@@ -453,7 +433,7 @@
                     <div class="titreetdescription">
                         <h3>Responsable : Mme Grâce Ilunga</h3>
                         <p> <span>Section Commerciale</span><br>
-                            Cours : Comptabilité, économie, gestion  <br>
+                            Cours : Comptabilité, économie, gestion <br>
                             Description : Fondamentaux du commerce et de la gestion d’entreprise.
                     </div>
                 </div>
@@ -464,7 +444,7 @@
                     <div class="titreetdescription">
                         <h3>Responsable : Mme Nadia Kayembe</h3>
                         <p><span>Section Littéraire</span> <br>
-                            Cours : Français, philo, histoire-géo, langues  <br>
+                            Cours : Français, philo, histoire-géo, langues <br>
                             Description : Renforcement de la pensée critique et de l’expression</p>
                     </div>
                 </div>
@@ -475,47 +455,12 @@
                     <div class="titreetdescription">
                         <h3>Responsable : M. Cédric Mukeba</h3>
                         <p><span>Section Math-Physique</span><br>
-                            Cours : Mathématiques, physique, informatique  <br> 
+                            Cours : Mathématiques, physique, informatique <br> 
                             Description : Approfondissement logique et scientifique pour études techniques.</p>
                     </div>
                 </div>
         </section>
     </main>
-    <footer>
-        <div class="conteneurf">        
-            <div class="gauche">
-                <div class="logo">
-                    <img src="./images/fond_et_illustraction/illustration/Logo.png" alt="logo">
-                </div>
-                <div class="resaux">
-                    <a href="www.facebook.com"><img src="./images/fond_et_illustraction/illustration/icon/facebook.png" alt="facebook"></a>
-                    <a href="www.linkedin.com"><img src="./images/fond_et_illustraction/illustration/icon/logo-linkedin.png" alt="facebook"></a>
-                    <a href="www.youtube.com"><img src="./images/fond_et_illustraction/illustration/icon/youtube.png" alt="facebook"></a>
-                    <a href="www.instagram.com"><img src="./images/fond_et_illustraction/illustration/icon/instagram.png" alt="facebook"></a>
-                </div>
-
-            </div>
-            <div class="centre">
-                <P>Complexe Scolaire Ado</P>
-                <p>Adresse : 123, Rue de l’Éducation, Ville, Pays</p>
-                <p><a href="tel:09757320">Téléphone : +243 975732060</a></p>
-                <p><a href="mailto:devmike0002@gmail.com">devmike0002@gmail.com</a></p>
-            </div>
-            <div class="droite">
-                <p>Lien</p>
-                <p><a href="index.html">Accueil</a></p>
-                <p><a href="a_propos.html">Apropos</a></p>
-                <p><a href="equipe.html">Equipe Pedagogique</a></p>
-                <p><a href="actualite.html">Actualité</a></p>
-                <p><a href="connexion_mon_enfant.html">Mon enfant</a></p>
-            </div>
-            <div class="horaire">
-                <p>Horaires d'ouverture</p>
-                <p>Lundi - Vendredi : 08h00 - 17h00</p>
-                <p>Samedi : 08h00 - 12h00</p>
-                <p>Dimanche : Fermé</p>
-            </div>
-        </div>
-    </footer>
+    <?php require_once 'includes/footer.php'; ?>
 </body>
 </html>

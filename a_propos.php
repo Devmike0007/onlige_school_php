@@ -8,27 +8,7 @@
     <title>Apropos</title>
 </head>
 <body>
-    <header>
-        <div class="barnoir">
-            <div class="logo">
-                <img src="./images/fond_et_illustraction/illustration/Logo.png" alt="logo">
-            </div>
-        </div>
-        <div class="barblanche">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="a_propos.html">A propos</a></li>
-                    <li><a href="equipe.html">Equipe Pédagogique</a></li>
-                    <li><a href="actualite.html">Actualité</a></li>
-                    <li><a href="connexion_mon_enfant.html">Mon enfant</a></li>
-                </ul>
-                <div class="button_lien">
-                    <a href="#">Connexion</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <?php require_once 'includes/header.php'; ?>
     <main>
         <section class="conteneur">
             
@@ -152,11 +132,11 @@
             <div class="center">
                 <div class="bloc">
                     <img src="./images/Personnages/apropos/graduation-hat.png" alt="">
-                    <p>Une éducation de qualité adaptée aux exigences académiques et professionnelles.  Nous offrons un enseignement structuré et rigoureux qui répond aux standards les plus élevés.</p>
+                    <p>Une éducation de qualité adaptée aux exigences académiques et professionnelles. Nous offrons un enseignement structuré et rigoureux qui répond aux standards les plus élevés.</p>
                 </div>
                 <div class="bloc">
                     <img src="./images/Personnages/apropos/mentorship.png" alt="">
-                    <p>Un encadrement personnalisé pour accompagner chaque élève vers la réussite.  Parce que chaque élève est unique, nous mettons en place un suivi individualisé pour comprendre ses besoins.</p>
+                    <p>Un encadrement personnalisé pour accompagner chaque élève vers la réussite. Parce que chaque élève est unique, nous mettons en place un suivi individualisé pour comprendre ses besoins.</p>
                 </div>
                 <div class="bloc">
                     <img src="./images/Personnages/apropos/community.png" alt="">
@@ -172,7 +152,7 @@
                 </div>
                 <div class="bloc">
                     <img src="./images/Personnages/apropos/balls-sports (1).png" alt="">
-                    <p>En intégrant [Nom de l'École], vous faites le choix d’un avenir prometteur, où l’excellence et le développement personnel sont au cœur de notre projet éducatif. .</p>
+                    <p>En intégrant [Nom de l'École], vous faites le choix d’un avenir prometteur, où l’excellence et le développement personnel sont au cœur de notre projet éducatif..</p>
                 </div>
             </div>
             <p>Notre engagement est de fournir un cadre éducatif qui allie savoir, discipline et innovation, afin de préparer nos élèves à devenir des citoyens responsables, curieux et ambitieux, prêts à relever les défis de demain.</p>
@@ -207,42 +187,7 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="conteneurf">        
-            <div class="gauche">
-                <div class="logo">
-                    <img src="./images/fond_et_illustraction/illustration/Logo.png" alt="logo">
-                </div>
-                <div class="resaux">
-                    <a href="www.facebook.com"><img src="./images/fond_et_illustraction/illustration/icon/facebook.png" alt="facebook"></a>
-                    <a href="www.linkedin.com"><img src="./images/fond_et_illustraction/illustration/icon/logo-linkedin.png" alt="facebook"></a>
-                    <a href="www.youtube.com"><img src="./images/fond_et_illustraction/illustration/icon/youtube.png" alt="facebook"></a>
-                    <a href="www.instagram.com"><img src="./images/fond_et_illustraction/illustration/icon/instagram.png" alt="facebook"></a>
-                </div>
-
-            </div>
-            <div class="centre">
-                <P>Complexe Scolaire Ado</P>
-                <p>Adresse : 123, Rue de l’Éducation, Ville, Pays</p>
-                <p><a href="tel:09757320">Téléphone : +243 975732060</a></p>
-                <p><a href="mailto:devmike0002@gmail.com">devmike0002@gmail.com</a></p>
-            </div>
-            <div class="droite">
-                <p>Lien</p>
-                <p><a href="index.html">Accueil</a></p>
-                <p><a href="a_propos.html">Apropos</a></p>
-                <p><a href="equipe.html">Equipe Pedagogique</a></p>
-                <p><a href="actualite.html">Actualité</a></p>
-                <p><a href="connexion_mon_enfant.html">Mon enfant</a></p>
-            </div>
-            <div class="horaire">
-                <p>Horaires d'ouverture</p>
-                <p>Lundi - Vendredi : 08h00 - 17h00</p>
-                <p>Samedi : 08h00 - 12h00</p>
-                <p>Dimanche : Fermé</p>
-            </div>
-        </div>
-    </footer>
+    <?php require_once 'includes/footer.php'; ?>
     
 </body>
 </html>
