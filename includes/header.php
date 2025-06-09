@@ -11,10 +11,10 @@
                     <li><a href="a_propos.php">A propos</a></li>
                     <li><a href="equipe.php">Equipe Pédagogique</a></li>
                     <li><a href="actualite.php">Actualité</a></li>
-                    <li><a href="connexion_mon_enfant.php">Mon enfant</a></li>
+                    <li><a href="http://localhost/onligne_school/mon_enfant/login.php">Mon enfant</a></li>
                 </ul>
                 <div class="button_lien">
-                    <a href="connexion_mon_enfant.php">Connexion</a>
+                    <a href="http://localhost/onligne_school/mon_enfant/login.php">Connexion</a>
                 </div>
             </nav>
         </div>
