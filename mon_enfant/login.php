@@ -14,7 +14,7 @@
             $update->bindValue(':token', $token);
             $update->bindValue(':email', $_POST['email']);
             $update->execute();
-            require_once 'includes/PHPMailer/sendemail.php';
+            require_once '../membre/includes/PHPMailer/sendemail.php';
 
         }else{
             $passwordIsOK=password_verify($_POST['password'],$resultat['password_utilisateur']);

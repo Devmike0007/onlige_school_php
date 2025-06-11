@@ -54,52 +54,41 @@ if (isset($_GET['email'], $_GET['token']) && !empty($_GET['email']) && !empty($_
 }
 ?>
 
-<body class="bg-primary">
-    <div id="layoutAuthentication">
-        <div id="layoutAuthentication_content">
-            <main>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-5">
-                            <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header">
-                                    <?php if (isset($message)) echo htmlspecialchars($message); ?>
-                                    <h3 class="text-center font-weight-light my-4">Réinitialisation du mot de passe</h3>
+<body class="">
+    <main>
+        <div class="container">
+            <div class="contenue">
+                <div class="header">
+                    <?php if (isset($message)) echo htmlspecialchars($message); ?>
+                    <h3 class="">Réinitialisation du mot de passe</h3>
+                </div>
+                <div class="center">
+                    <div class="">Veuillez rentrer un nouveau mot de passe.</div>
+                    <form action="new_password.php?email=<?php echo urlencode($email); ?>&token=<?php echo urlencode($token); ?>" method="post">
+                        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
+                        <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
+                        <div class="deuxconteneur">
+                            <div class="">
+                                <div class="">
+                                    <input class="form-control" id="password" name="password" type="password" placeholder="Create a password" />
+                                    <label for="password">Mot de passe</label>
                                 </div>
-                                <div class="card-body">
-                                    <div class="small mb-3 text-muted">Veuillez rentrer un nouveau mot de passe.</div>
-                                    <form action="new_password.php?email=<?php echo urlencode($email); ?>&token=<?php echo urlencode($token); ?>" method="post">
-                                        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
-                                        <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
-                                        <div class="row mb-3">
-                                            <div class="col-md-6">
-                                                <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="password" name="password" type="password" placeholder="Create a password" />
-                                                    <label for="password">Mot de passe</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="confirm_password" name="confirm_password" type="password" placeholder="Confirm password" />
-                                                    <label for="confirm_password">Confirmer le mot de passe</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="login.php">Connexion</a>
-                                            <input type="submit" name="new_password" class="btn btn-primary" value="Valider" />
-                                        </div>
-                                    </form>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <input class="form-control" id="confirm_password" name="confirm_password" type="password" placeholder="Confirm password" />
+                                    <label for="confirm_password">Confirmer le mot de passe</label>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="">
+                            <a class="small" href="login.php">Connexion</a>
+                            <input type="submit" name="new_password" class="btn btn-primary" value="Valider" />
+                        </div>
+                    </form>
                 </div>
-            </main>
+            </div>
         </div>
-        <?php require_once 'includes/footer.php'; ?>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    </main>
 </body>
 </html>

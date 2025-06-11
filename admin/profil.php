@@ -4,7 +4,7 @@
     require_once 'includes/header_login.php';
 if(isset($_SESSION['id_utilisateur'])){
     $id_utilisateur=$_SESSION['id_utilisateur'];
-    $requete = "SELECT * FROM webcms.utilisateurs WHERE id_utilisateur = $id_utilisateur AND role_utilisateur='Admin'";
+    $requete = "SELECT * FROM onligne_schools.utilisateurs WHERE id_utilisateur = $id_utilisateur AND role_utilisateur='Admin'";
     $result = $bdd->query($requete);
     $ligne = $result->fetch(PDO::FETCH_ASSOC);
 
@@ -23,12 +23,11 @@ if(isset($_SESSION['id_utilisateur'])){
 
 ?>
 
-    <body class="bg-primary">
-        <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
+    <body>
+        <div>
+            <div>
                 <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
+
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header">
@@ -36,7 +35,7 @@ if(isset($_SESSION['id_utilisateur'])){
                                     <h3 class="text-center font-weight-light my-4">Profil</h3>
                                     </div>
                                     <div class="card-header">
-                                        <?php if (isset($photo_profil)) echo "<center><img width=150 class='media-objeect' src='img/photoprofil/$photo_profil' alt='photo de profil'/></center>"; ?>                                      </div>
+                                        <?php if (isset($photo_profil)) echo "<center><img width=150 class='media-objeect' src='img/photo_profil/$photo_profil' alt='photo de profil'/></center>"; ?>                                      </div>
                                     <div class="card-body">
                                         <p><?php if(isset($nom_utilisateur)) echo "Nom: ".$nom_utilisateur ?> </p>                                     
                                         <p><?php if(isset($prenom_utilisateur)) echo "prenom: ".$prenom_utilisateur ?> </p>                                     

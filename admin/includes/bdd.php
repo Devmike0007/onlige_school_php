@@ -1,5 +1,5 @@
 <?php
-$dsn='mysql:dbname=webcms;host=localhost';
+$dsn='mysql:dbname=onligne_schools;host=localhost';
 $user='root';
 $password='';
 

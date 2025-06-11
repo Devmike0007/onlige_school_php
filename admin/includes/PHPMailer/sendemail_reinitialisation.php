@@ -15,20 +15,21 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'espoircompagnie0001@gmail.com';
-    $mail->Password = 'ciqypbffltcqtvjp'; // ⚠️ mot de passe d'application SANS espaces
+    $mail->Username = 'onligneschool@gmail.com';
+    $mail->Password = 'jibhwigateornnnn'; // ⚠️ mot de passe d'application SANS espaces
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     $mail->CharSet = 'UTF-8';
 
     // Expéditeur et destinataire
-    $mail->setFrom('espoircompagnie0001@gmail.com', 'Michee');
+    $mail->setFrom('onligneschool@gmail.com', 'Onligne_School');
     $mail->addAddress($_POST['email'],'');
 
     // Contenu
     $mail->isHTML(true);
     $mail->Subject = 'Confirmation d\'email';
-    $mail->Body = 'Afin de réintialiser votre mot de passe , merci de cliqquer sur le lien suivant : <a href="localhost/webcms/admin/new_password.php?token='.$token.'&email='.$_POST['email'].'">Réinitialiser le mot de passe</a>';
+    $mail->Body = ''
+    'Afin de réintialiser votre mot de passe , merci de cliqquer sur le lien suivant : <a href="localhost/onligne_school/admin/new_password.php?token='.$token.'&email='.$_POST['email'].'">Réinitialiser le mot de passe</a>';
 
     // Envoi
     $mail->send();

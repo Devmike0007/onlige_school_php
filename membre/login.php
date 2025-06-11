@@ -51,49 +51,62 @@
 <?php
     require_once 'includes/header_login.php';
 ?>
-    <body class="bg-primary">
-        <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-5">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header">
-                                    <?php if (isset($message)) echo $message; ?>    
-                                    <h3 class="text-center font-weight-light my-4">Connexion</h3></div>
-                                    <div class="card-body">
-                                        <form action="login.php" method="post"> 
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" name="email" type="email" value="<?php if(isset($_COOKIE['email'])) echo $_COOKIE['email']; ?>" />
-                                                <label for="inputEmail"> Addresse email</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" name="password" type="password" value="<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password']; ?>" />
-                                                <label for="inputPassword">Mot de passe</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" name="sesouvenir"/>
-                                                <label class="form-check-label" for="inputRememberPassword">Se souvenir de moi</label>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.php">Mot de passe oublie</a>
-                                            <input type="submit" value="Connexion" name="connexion" class="btn btn-primary">
-
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+    <<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/connexion_mon_enfant.css">
+    <title>Connexion</title>
+</head>
+<body>
+    <main>
+        <div class="gauche">
+            <div class="top">
+                <h1>Bienvenue dans l’Espace 
+                    Parent</h1>
+                <p>Accompagnez la réussite scolaire de votre enfant, en toute simplicité.</p>
             </div>
-            <?php
-            require_once 'includes/footer.php';
-            ?>
+            <div class="bottom">
+                <img src="./images/Personnages/monenfant/connexion/Fichier 1.svg" alt="">
+                <div class="resaux">
+                    <a href="www.facebook.com"><img src="./images/Personnages/monenfant/icon/facebook.png" alt="facebook"></a>
+                    <a href="www.linkedin.com"><img src="./images/Personnages/monenfant/icon/logo-linkedin.png" alt="facebook"></a>
+                    <a href="www.youtube.com"><img src="./images/Personnages/monenfant/icon/youtube.png" alt="facebook"></a>
+                    <a href="www.instagram.com"><img src="./images/Personnages/monenfant/icon/instagram.png" alt="facebook"></a>
+                </div>
+            </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+
+     
+
+        <div class="droite">
+            <div class="logo">
+                <img src="./images/fond_et_illustraction/illustration/Logo.png" alt="logo">
+            </div>
+            <div class="connexion">
+                <h1>Connexion</h1>
+                <?php if (isset($message)) echo $message; ?>
+                  
+
+                <form action="login.php" method="post">
+                    <div class="email">
+                        <label for="">Email address</label>
+                        <input type="email" name="email" id="email" placeholder="email@janesfakedomain.net" required>
+                    </div>
+                    <div class="code">
+                        <label for="">Mot de pass</label>
+                        <input type="password" name="password" id="password" placeholder="*********" required>
+                    </div>
+                    <button type="submit" name="connexion">Se connexion</button>
+
+                    <div class="mot_de_passe_oublie">
+                        <a href="http://localhost/onligne_school/membre/password.php"><img src="./images/Personnages/monenfant/icon/cadenas.png" alt="cadenas"><p>Mot de passe oublié ?</p></a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </main>
+</body>
 </html>

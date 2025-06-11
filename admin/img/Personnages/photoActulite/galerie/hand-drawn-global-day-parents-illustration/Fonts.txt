@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Dela Gothic One
+Author: aratakana
+Url: https://fonts.google.com/specimen/Dela+Gothic+One
+
+Font: Poppins
+Author: Indian Type Foundry,Jonny Pinhorn
+Url: https://fonts.google.com/specimen/Poppins

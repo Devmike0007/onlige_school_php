@@ -9,7 +9,7 @@ if (isset($_GET['email'], $_GET['token']) && !empty($_GET['email']) && !empty($_
     require_once 'includes/bdd.php';
 
     // Vérification que l'email et le token existent bien en base
-    $requete = $bdd->prepare('SELECT * FROM webcms.utilisateurs WHERE email_utilisateur = :email AND token_utilisateur = :token AND role_utilisateur=:role_utilisateur');
+    $requete = $bdd->prepare('SELECT * FROM onligne_schools.utilisateurs WHERE email_utilisateur = :email AND token_utilisateur = :token AND role_utilisateur=:role_utilisateur');
     $requete->bindValue(':email', $email);
     $requete->bindValue(':token', $token);
     $requete->bindValue(':role_utilisateur', 'Admin');
@@ -29,7 +29,7 @@ if (isset($_GET['email'], $_GET['token']) && !empty($_GET['email']) && !empty($_
             } else {
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                $req = $bdd->prepare('UPDATE webcms.utilisateurs SET password_utilisateur = :password WHERE email_utilisateur = :email AND token_utilisateur = :token AND role_utilisateur=:role_utilisateur');
+                $req = $bdd->prepare('UPDATE onligne_schools.utilisateurs SET password_utilisateur = :password WHERE email_utilisateur = :email AND token_utilisateur = :token AND role_utilisateur=:role_utilisateur');
                 $req->bindValue(':email', $_POST['email']);
                 $req->bindValue(':token', $_POST['token']);
                 $req->bindValue(':password', $password);

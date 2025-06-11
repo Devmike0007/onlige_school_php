@@ -5,7 +5,7 @@
     $email = $_GET['email'];
     $token = $_GET['token'];
 
-   $requete = $bdd->prepare('SELECT * FROM webcms.utilisateurs WHERE email_utilisateur = :email AND token_utilisateur = :token');
+   $requete = $bdd->prepare('SELECT * FROM onligne_schools.utilisateurs WHERE email_utilisateur = :email AND token_utilisateur = :token');
    $requete->bindValue(':email',$email);
    $requete->bindValue(':token',$token);
 
@@ -13,7 +13,7 @@
    $nombre = $requete->rowCount();
 
    if($nombre == 1){
-      $update = $bdd->prepare('UPDATE webcms.utilisateurs SET validation_email_utilisateur =:validation, token_utilisateur =:token WHERE email_utilisateur=:email');
+      $update = $bdd->prepare('UPDATE onligne_schools.utilisateurs SET validation_email_utilisateur =:validation, token_utilisateur =:token WHERE email_utilisateur=:email');
       $update->bindValue(':email',$email);
       $update->bindValue(':token',"EmailValide");
       $update->bindValue(':validation',1);

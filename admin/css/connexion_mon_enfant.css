@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/fond_et_illustraction/fond/fond.png);
+    background-size:cover;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gauche{
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.top{
+    color: rgb(255, 255, 255);
+    padding: 50px;
+    width: 80%;
+}
+.top h1{
+    font-size: 45px;
+}
+.top p{
+    font-size: 35px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    height: 60%;
+}
+
+.bottom img{
+    height: 100%;
+    opacity: 30%;
+} 
+.bottom .resaux{
+    display: flex;
+    gap: 30px;
+    position:relative ;
+    height: 20px;
+    margin-right: 50px;
+    bottom: -350px;
+}
+.bottom .resaux img{
+    height: 100%;
+    opacity: 100%;
+}
+
+.droite{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    margin-top: 80px;
+    background-color: black;
+    display: flex;
+    padding: 0 20px ;
+    justify-content: center;
+    height: 90px;
+    width: 300px;
+    left: 750px;
+    top: 80px;
+}
+.logo img{   
+    margin: auto;
+    width: 50%;
+    height: 50px;
+}
+.droite .connexion{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    gap: 20px;
+    width: 70%;
+}
+.droite label{
+    font-size: 20px;
+}
+.connexion h1{
+    font-size: 40px;
+    margin-top: 50px;
+}
+.connexion .email{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.connexion .email input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 20px;
+}
+.connexion .email input:focus{
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+}
+.connexion .code{ 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.connexion .code input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 20px;
+}
+.connexion .code input:focus{
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+}
+button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
+}
+button:active{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+}
+.mot_de_passe_oublie {
+    position: relative;
+    left: 300px;
+    width: 50%;
+
+}
+.mot_de_passe_oublie a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.mot_de_passe_oublie a img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}

@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/fond_et_illustraction/fond/fond.png);
+    background-size:cover;
+}
+main{
+    display: flex;
+}
+.gauche{
+    background-color: black;
+    height: 100vh;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.gauche .top{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.425);
+
+}
+.gauche .top img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.gauche .top .text p{
+    width: 100%;
+    margin: 0;
+
+}
+.gauche .top .text{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    padding: 0 5px;
+
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    color: white;
+    margin-left: 30px; 
+}
+.un{
+    background-color: rgba(255, 255, 255, 0.425);
+}
+.center .balise a{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    gap: 20px;
+    text-decoration: none;
+    color: white;
+} 
+.balise :hover{
+    background-color: rgba(255, 255, 255, 0.425);
+
+}
+.center  img{
+    height: 100%;
+}
+
+.centrer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.centrer #gauche{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 50%;
+    height: 95%;
+    gap: 20px;
+
+}
+.centre #gauche .profils{
+    width: 500px;
+    height: 230px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+
+}
+.photo_de_larticle{
+    height: 170px;
+    width: 150px;
+    overflow: hidden;
+}
+.photo_de_larticle img{
+    width: 100%; 
+}
+.informations{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.detail .balise{
+    display: flex;
+    height: 20px;
+    width: 100%;
+    gap: 10px;
+    margin: 0;
+}
+.detail  img{
+    height: 100%;
+}
+.agenda{
+    width: 500px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+
+
+} 
+.agenda .balise{
+    position: relative;
+    margin-top: 1px;
+    margin-left: 10px;
+    display: flex;
+    height: 20px;
+    font-size: 20px;
+    gap: 10px;
+}
+.agenda .balise img{
+    height: 100%;
+}
+.agenda .contenue{
+
+    background-color: rgba(78, 76, 76, 0.048);
+    height: 150px;
+    width: 95%;
+    margin-left: 10px;
+}.event {
+    border-left: 5px solid #000000;
+    padding-left: 15px;   
+    margin: 20px 20px ;
+
+  }
+  
+  .event h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  .event p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    color: white;
+  }
+  
+  .badge-examen {
+    background-color: #e74c3c;
+  }
+.doc {
+    border-left: 5px solid #000000;
+    padding-left: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+  
+.doc h4 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #34495e;
+}
+  
+.doc p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+
+
+.download-section {
+    margin-top: 10px;
+
+  }  
+  .download-btn {
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .download-btn:hover {
+    background-color: #404040e7;
+  }
+
+
+.gauche .top{
+    background-color: rgba(0, 0, 0, 0.627);
+    height: 40px;
+    margin-left: 30px; 
+
+} 
+#droite{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+    height: 95%;
+    width: 65%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#droite img{
+    height: 100%;
+}
+#droite .titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+#droite hr{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+#droite .Conteneur_cours{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#droite .Conteneur_cours .cours{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+    gap: 10px; 
+    height: 100px;
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+}
+#droite .Conteneur_cours .cours .titre_cours{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    font-size: 20px;
+    gap: 10px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+.top img{
+    height: 100%;
+}
+.resaux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    gap: 20px;
+    position: fixed;
+    top: 720px;
+    margin-left: 30px; 
+}.resaux a{
+    height: 25px;
+}
+.resaux img{
+    height: 100%;
+    opacity: 80%;
+}
+
+
+
+.centre{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+.centre .top{
+    background-color: rgba(0, 0, 0, 0.627);
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+}
+.top p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 30px; 
+    margin-top: 10px; 
+}
+.top a{
+    background-color: rgba(255, 250, 250, 0.627);
+    color: rgb(0, 0, 0);
+    border: none;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    margin-left: 30px; 
+    margin-top: 10px; 
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.top a:hover{
+    background-color: rgba(255, 255, 255, 0.425);
+
+}

@@ -6,7 +6,7 @@ require_once 'includes/header_login.php';
 if (isset($_GET['modifier_compte']) && isset($_SESSION['id_utilisateur']) && $_GET['modifier_compte'] == $_SESSION['id_utilisateur']) {
     $id_utilisateur = $_SESSION['id_utilisateur'];
 
-    $requete = "SELECT * FROM webcms.utilisateurs WHERE id_utilisateur=$id_utilisateur AND role_utilisateur='Admin'";
+    $requete = "SELECT * FROM onligne_schools.utilisateurs WHERE id_utilisateur=$id_utilisateur AND role_utilisateur='Admin'";
     $result = $bdd->query($requete);
     $ligne = $result->fetch(PDO::FETCH_ASSOC);
 
@@ -23,7 +23,7 @@ if (isset($_GET['modifier_compte']) && isset($_SESSION['id_utilisateur']) && $_G
         } elseif (empty($_POST['username']) || !ctype_alnum($_POST['username'])) {
             $message = "Votre nom d'utilisateur doit être alphanumérique";
         } else {
-            $req = $bdd->prepare('SELECT * FROM webcms.utilisateurs WHERE username = :username AND role_utilisateur=:role_utilisateur');
+            $req = $bdd->prepare('SELECT * FROM onligne_schools.utilisateurs WHERE username = :username AND role_utilisateur=:role_utilisateur');
             $req->bindValue(':username', $_POST['username']);
             $req->bindValue(':role_utilisateur', 'Admin');
             $req->execute();
@@ -32,7 +32,7 @@ if (isset($_GET['modifier_compte']) && isset($_SESSION['id_utilisateur']) && $_G
             if ($resultat) {
                 $message = "Le nom d'utilisateur saisi existe déjà, merci d'en choisir un autre.";
             } else {
-                $requete2 = $bdd->prepare('UPDATE webcms.utilisateurs SET nom_utilisateur = :nom, prenom_utilisateur = :prenom, username = :username, photo_utilisateur = :photo_profil WHERE id_utilisateur = :id_utilisateur AND role_utilisateur=:role_utilisateur');
+                $requete2 = $bdd->prepare('UPDATE onligne_schools.utilisateurs SET nom_utilisateur = :nom, prenom_utilisateur = :prenom, username = :username, photo_utilisateur = :photo_profil WHERE id_utilisateur = :id_utilisateur AND role_utilisateur=:role_utilisateur');
                 $requete2->bindValue(':id_utilisateur', $id_utilisateur);
                 $requete2->bindValue(':nom', $_POST['nom']);
                 $requete2->bindValue(':prenom', $_POST['prenom']);
@@ -45,7 +45,7 @@ if (isset($_GET['modifier_compte']) && isset($_SESSION['id_utilisateur']) && $_G
                     if (preg_match("#jpeg|png|jpg#", $_FILES['photo_profil']['type'])) {
                         require_once "includes/token.php";
                         $nouveau_nom_photo = $token . "_" . $_FILES['photo_profil']['name'];
-                        $path = "img/photoprofil/";
+                        $path = "img/photo_profil/";
                         move_uploaded_file($_FILES['photo_profil']['tmp_name'], $path . $nouveau_nom_photo);
                         $requete2->bindValue(':photo_profil', $nouveau_nom_photo);
                     } else {
@@ -105,7 +105,7 @@ if (isset($_GET['modifier_compte']) && isset($_SESSION['id_utilisateur']) && $_G
                                         </div>
                                         <div class="col-md-6">
                                             <div>
-                                                <img width="50" class="media-object mb-2" src="img/photoprofil/<?= $photo_profil ?>" alt="photo de profil" />
+                                                <img width="50" class="media-object mb-2" src="images/photo_profil/<?= $photo_profil ?>" alt="photo de profil" />
                                                 <label for="photo">Photo de profil</label>
                                                 <input class="form-control" id="photo" name="photo_profil" type="file" accept="image/*" />
                                             </div>

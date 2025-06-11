@@ -7,7 +7,7 @@
         }
         else{
             require_once "includes/bdd.php";
-            $requete = $bdd->prepare('SELECT * FROM webcms.utilisateurs WHERE email_utilisateur =:email AND role_utilisateur =:role_utilisateur');
+            $requete = $bdd->prepare('SELECT * FROM onligne_schools.utilisateurs WHERE email_utilisateur =:email AND role_utilisateur =:role_utilisateur');
             $requete->bindvalue(':email',$_POST['email']);
             $requete->bindvalue(':role_utilisateur','Admin');
             $requete->execute();
@@ -19,7 +19,7 @@
             else{
                 if($result['validation_email_utilisateur']!= 1){
                     require_once "includes/token.php";
-                    $update =$bdd->prepare('UPDATE webcms.utilisateurs SET token_utilisateur =:token WHERE email_utilisateur=:email AND role_utilisateur =:role_utilisateur');
+                    $update =$bdd->prepare('UPDATE onligne_schools.utilisateurs SET token_utilisateur =:token WHERE email_utilisateur=:email AND role_utilisateur =:role_utilisateur');
                     $update->bindvalue(':token',$token);
                     $update->bindvalue('email',$_POST['email']);
                     $update->bindvalue(':role_utilisateur','Admin');
@@ -32,7 +32,7 @@
                 }
                 else{
                     require_once "includes/token.php";
-                    $update =$bdd->prepare('UPDATE webcms.utilisateurs SET token_utilisateur =:token WHERE email_utilisateur=:email AND role_utilisateur =:role_utilisateur');
+                    $update =$bdd->prepare('UPDATE onligne_schools.utilisateurs SET token_utilisateur =:token WHERE email_utilisateur=:email AND role_utilisateur =:role_utilisateur');
                     $update->bindvalue(':token',$token);
                     $update->bindvalue('email',$_POST['email']);
                     $update->bindvalue(':role_utilisateur','Admin');

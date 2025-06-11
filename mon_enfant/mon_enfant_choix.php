@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/mon_enfant_choix.css">
+
     <title>Choix profils</title>
 </head>
 <body>
@@ -13,7 +14,6 @@
         </div>
         <div class="conteneur">
             <div class="profils">
-
                 <div class="photo_de_larticle">
                     <img src="./images/Personnages/monenfant/choix/11e6064a-3878-47b2-8808-b4850a7e7c09.jpeg" alt="">
                 </div>
@@ -49,7 +49,7 @@
                 <div class="informations">
                     <h2>Junior Kayembe </h2>                
                     <div class="detail">
-                        <a href="mon_enfants.html">g</a>
+                        <a href="mon_enfants.php">g</a>
                         <div class="balise">
                             <img src="./images/Personnages/monenfant/icon/classe (1).png" alt=""> 
                             <p>Classe : 6e Primaire</p>

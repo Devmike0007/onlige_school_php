@@ -1,4 +1,4 @@
-<?php require_once 'includes/header_login.php'
+<?php require_once 'includes/header_register.php'
 ?>
  <?php
     if(isset($_POST['forget_password'])){
@@ -46,39 +46,38 @@
  ?>
 
 
-    <body class="bg-primary">
-        <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-5">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header">
-                                        <?php if (isset($message)) echo $message; ?>    
-                                        <h3 class="text-center font-weight-light my-4">Réinitialisation du mot de passe</h3></div>
-                                    <div class="card-body">
-                                        <div class="small mb-3 text-muted">Veuillez rentrer votre adresse email.</div>
-                                        <form action="password.php" method = "post">
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email" name="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Adresse Email</label>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="login.php">Connexion</a>
-                                                <input type="submit" name="forget_password" class="btn btn-primary" href="login.php" value="Réinitialiser mot de passe"/>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+<body>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réinitialisation</title>
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS séparé -->
+</head>
+<body>
+    <main>
+        <div class="center">
+            <div class="header">
+                <?php if (isset($message)) echo $message; ?>
+                <h3 class="titre">Réinitialisation du mot de passe</h3>
+                <p class="intro">Veuillez entrer votre adresse email.</p>
             </div>
-            <?php require_once 'includes/footer.php'; ?>
+            <form action="password.php" method="post" class="formulaire">
+                <div class="conteneur_element">
+                    <label for="inputEmail">Adresse Email</label>
+                    <input id="inputEmail" type="email" name="email" placeholder="name@example.com" required />
+                </div>
+                <div class="btn-inscription">
+                    <input type="submit" name="forget_password" class="btn-submit" value="Réinitialiser le mot de passe" />
+                </div>
+                <div class="footer">
+                    <a class="small" href="login.php">← Retour à la connexion</a>
+                </div>
+            </form>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    </main>
+</body>
+</html>
+     
+</body>
 </html>

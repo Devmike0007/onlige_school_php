@@ -15,8 +15,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'espoircompagnie0001@gmail.com';
-    $mail->Password = 'ciqypbffltcqtvjp'; // ⚠️ mot de passe d'application SANS espaces
+    $mail->Username = 'onligneschool@gmail.com';
+    $mail->Password = 'jibhwigateornnnn'; // ⚠️ mot de passe d'application SANS espaces
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     $mail->CharSet = 'UTF-8';

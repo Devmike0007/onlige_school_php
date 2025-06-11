@@ -15,8 +15,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'espoircompagnie0001@gmail.com';
-    $mail->Password = 'ciqypbffltcqtvjp'; // ⚠️ mot de passe d'application SANS espaces
+    $mail->Username = 'onligneschool@gmail.com';
+    $mail->Password = 'jibhwigateornnnn'; // ⚠️ mot de passe d'application SANS espaces
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     $mail->CharSet = 'UTF-8';
@@ -28,7 +28,7 @@ try {
     // Contenu
     $mail->isHTML(true);
     $mail->Subject = 'Confirmation d\'email';
-    $mail->Body = 'Afin de valider votre adresse email, merci de cliqquer sur le lien suivant : <a href="localhost/webcms/verification.php?token='.$token.'&email='.$_POST['email'].'">Confirmer votre email</a>';
+    $mail->Body = 'Afin de valider votre adresse email, merci de cliqquer sur le lien suivant : <a href="localhost/onligne_school/admin/verification.php?token='.$token.'&email='.$_POST['email'].'">Confirmer votre email</a>';
 
     // Envoi
     $mail->send();

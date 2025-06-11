@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    if(!($_SESSION['id_utilisateur']  && $_SESSION['role_utilisateur'] && $_SESSION['role_utilisateur'] == 'Admin')){
+                 echo "<script type=\"text/javascript\"> alert('Espace reserver aux administrateur.'); document.location.href ='http://localhost/onligne_school/index.php';</script>";
+
+
+    }
+
+?>
 <?php
    if (isset($_POST['inscription'])){
         if(empty($_POST['prenom']) || !ctype_alpha($_POST['prenom'])){
@@ -82,67 +91,69 @@
     }
 ?>
 <?php
-require_once 'includes/header_login.php';
+require_once 'includes/header_register.php';
 ?>
 <!------ formulaire---------->
-    <body>
-        <main>
-            <div class="container">
-                <div class="contenue">
 
-                    <div class="header">
-                        <?php if (isset($message)) echo $message; ?>
-                        <h3 class="">Creer un compte membre</h3>
-                    </div>
-                        <div class="center">
-                            <form action="register.php" method="post" enctype="multipart/form-data">
-                                <div class="deuxconteneur">
-                                        <div class="conteneur_element">
-                                            <label for="prenom">Prénom</label>
-                                            <input class="form-control" id="prenom" name="prenom" type="text" placeholder="Prénom" />                                           
-                                        </div>
-                                        <div class="conteneur_element">
-                                            <label for="nom">Nom</label>
-                                            <input class="form-control" id="nom" name="nom" type="text" placeholder="Nom" />                                           
-                                        </div>
-                                </div>
-                                <div class="conteneur_element">
-                                    <label for="email">Adresse e-mail</label>
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" />                                   
-                                </div>
-                                <div class="deuxconteneur">
-                                        <div class="conteneur_element">
-                                            <label for="password">Mot de passe</label>
-                                            <input class="form-control" id="password" name="password" type="password" placeholder="Create a password" />                                          
-                                        </div>
-                                        <div class="conteneur_element">
-                                            <label for="confirm_password">Confirmer le mot de passe</label>
-                                            <input class="form-control" id="confirm_password" name="confirm_password" type="password" placeholder="Confirm password" />                                  
-                                        </div>
-                                </div>
-                                <div class="deuxconteneur">
-                                        <div class="conteneur_element">
-                                            <label for="nom">Nom d'utilisateur</label>    
-                                            <input class="form-control" id="nom" name="username" type="text" placeholder="Nom" />     
-                                        </div>
-                                        <div>
-                                            <label for="photo">Photo de profil</label>
-                                            <input class="form-control" id="photo" name="photo_profil" type="file" accept="image/*" />
-
-                                        </div>
-                                </div>
-                                <div class="">
-                                    <div class="d-grid"><input type="submit" name="inscription" class="btn btn-primary btn-block" value="Créer un compte"></div>
-                                </div>
-                            </form>
-                        </div>
-                    <div class="footer">
-                        <div class="small"><a href="login.html">Vous avez un compte? Aller à la connexion</a></div>
-                    </div>
-                </div>
+<body>
+    <main>
+        <div class="center">
+            <div class="header">
+                <?php if (isset($message)) echo $message; ?>
+                <h3 class="text-center font-weight-light my-4">Créer un compte membre</h3>
             </div>
-        </main>
-<?php
-require_once 'includes/footer.php';
-?>
+
+            <div class="formulaire">
+                <form action="register.php" method="post" enctype="multipart/form-data">
+                    <div class="deuxconteneur">
+                        <div class="conteneur_element">
+                            <label for="prenom">Prénom</label>
+                            <input id="prenom" name="prenom" type="text" placeholder="Prénom" />
+                        </div>
+                        <div class="conteneur_element">
+                            <label for="nom">Nom</label>
+                            <input id="nom" name="nom" type="text" placeholder="Nom" />
+                        </div>
+                    </div>
+
+                    <div class="conteneur_element">
+                        <label for="email">Adresse e-mail</label>
+                        <input id="email" name="email" type="email" placeholder="nom@exemple.com" />
+                    </div>
+
+                    <div class="deuxconteneur">
+                        <div class="conteneur_element">
+                            <label for="password">Mot de passe</label>
+                            <input id="password" name="password" type="password" placeholder="Mot de passe" />
+                        </div>
+                        <div class="conteneur_element">
+                            <label for="confirm_password">Confirmer mot de passe</label>
+                            <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirmer mot de passe" />
+                        </div>
+                    </div>
+
+                    <div class="deuxconteneur">
+                        <div class="conteneur_element">
+                            <label for="username">Nom d'utilisateur</label>
+                            <input id="username" name="username" type="text" placeholder="Nom d'utilisateur" />
+                        </div>
+                        <div class="conteneur_element">
+                            <label for="photo">Photo de profil</label>
+                            <input id="photo" name="photo_profil" type="file" accept="image/*" />
+                        </div>
+                    </div>
+
+                    <div class="btn-inscription">
+                        <input type="submit" name="inscription" value="Créer un compte">
+                    </div>
+                </form>
+            </div>
+
+            <div class="footer">
+                <p><a href="login.php">Vous avez déjà un compte ? Se connecter</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
 
