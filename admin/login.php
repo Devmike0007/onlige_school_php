@@ -68,7 +68,7 @@
                 <p>Accompagnez la réussite scolaire de votre enfant, en toute simplicité.</p>
             </div>
             <div class="bottom">
-                <img src="./images/Personnages/monenfant/connexion/Fichier 1.svg" alt="">
+                <img src="./img/Personnages/monenfant/connexion/Fichier 1.svg" alt="">
                 <div class="resaux">
                     <a href="www.facebook.com"><img src="./img/Personnages/monenfant/icon/facebook.png" alt="facebook"></a>
                     <a href="www.linkedin.com"><img src="./img/Personnages/monenfant/icon/logo-linkedin.png" alt="facebook"></a>

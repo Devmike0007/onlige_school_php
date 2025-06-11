@@ -68,61 +68,63 @@ if (isset($_GET['modifier_compte']) && isset($_SESSION['id_utilisateur']) && $_G
 ?>
 
 <!-- Formulaire -->
-<body class="bg-primary">
-<div id="layoutAuthentication">
-    <div id="layoutAuthentication_content">
-        <main>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header">
-                                <?php if (isset($message)) echo "<div class='alert alert-warning'>$message</div>"; ?>
-                                <h3 class="text-center font-weight-light my-4">Modifier mon profil</h3>
-                            </div>
-                            <div class="card-body">
-                                <form action="modifier_profil.php?modifier_compte=<?= $id_utilisateur ?>" method="post" enctype="multipart/form-data">
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="prenom" name="prenom" type="text" value="<?= $prenom_utilisateur ?>" />
-                                                <label for="prenom">Prénom</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input class="form-control" id="nom" name="nom" type="text" value="<?= $nom_utilisateur ?>" />
-                                                <label for="nom">Nom</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input class="form-control" id="username" name="username" type="text" value="<?= $username ?>" />
-                                                <label for="username">Nom d'utilisateur</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div>
-                                                <img width="50" class="media-object mb-2" src="images/photo_profil/<?= $photo_profil ?>" alt="photo de profil" />
-                                                <label for="photo">Photo de profil</label>
-                                                <input class="form-control" id="photo" name="photo_profil" type="file" accept="image/*" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 mb-0">
-                                        <div class="d-grid">
-                                            <input type="submit" name="modif_profil" class="btn btn-primary btn-block" value="Modifier mon profil">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+<body>
+    <main>
+        <div class="container">
+            <!-- Sidebar -->
+            <div class="sibedar">
+                <div class="photo">
+                    <?php if (isset($photo_profil)) echo "<center><img width=150 class='media-objeect' src='img/photo_profil/$photo_profil' alt='photo de profil'/></center>"; ?>
+                    <div class="titre">
+                        <p><?php if(isset($nom_utilisateur)) echo " " . $nom_utilisateur ?> </p>
+                        <p><?php if(isset($prenom_utilisateur)) echo " " . $prenom_utilisateur ?> </p>
                     </div>
                 </div>
+                <div class="ligne">
+                    <a href="http://localhost/onligne_school/admin/profil.php"><i></i>Annuel</a>
+                    <a href="http://localhost/onligne_school/mon_enfant/mon_enfants.php"><i></i>Mon enfant</a>
+                </div>
             </div>
-        </main>
-    </div>
-</div>
-<?php require_once 'includes/footer.php'; ?>
+
+            <!-- Contenu central -->
+            <div class="center">
+                <div class="header">
+                    <?php if (isset($message)) echo "<div class=''>$message</div>"; ?>
+                    <h3 class="text-center font-weight-light my-4">Modifier mon profil</h3>
+                </div>
+
+                <div class="identite">
+                    <form action="modifier_profil.php?modifier_compte=<?= $id_utilisateur ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom</label>
+                                <input id="prenom" name="prenom" type="text" value="<?= $prenom_utilisateur ?>" />
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input id="nom" name="nom" type="text" value="<?= $nom_utilisateur ?>" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="username">Nom d'utilisateur</label>
+                                <input id="username" name="username" type="text" value="<?= $username ?>" />
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Photo de profil</label><br>
+                                <input id="photo" name="photo_profil" type="file" accept="image/*" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="modif_profil" class="btn btn-primary btn-block" value="Modifier mon profil">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -34,6 +34,7 @@
                     $update->bindvalue(':token',$token);
                     $update->bindvalue('email',$_POST['email']);
                     $update->execute();
+                    $message="✅ Un mail vous a été envoyé pour la reinitialisation de votre mot de paasse. !";
 
                     require_once "includes/PHPMailer/sendemail_reinitialisation.php";
                 }
@@ -46,14 +47,7 @@
  ?>
 
 
-<body>
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Réinitialisation</title>
-    <link rel="stylesheet" href="css/reset.css"> <!-- CSS séparé -->
-</head>
+
 <body>
     <main>
         <div class="center">
@@ -71,7 +65,7 @@
                     <input type="submit" name="forget_password" class="btn-submit" value="Réinitialiser le mot de passe" />
                 </div>
                 <div class="footer">
-                    <a class="small" href="login.php">← Retour à la connexion</a>
+                    <a class="small" href="http://localhost/onligne_school/mon_enfant/login.php">← Retour à la connexion</a>
                 </div>
             </form>
         </div>
@@ -79,5 +73,3 @@
 </body>
 </html>
      
-</body>
-</html>

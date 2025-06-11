@@ -1,4 +1,4 @@
-<?php require_once 'includes/header_login.php'; ?>
+<?php require_once 'includes/header_register.php'; ?>
 
 <?php
 if (isset($_GET['email'], $_GET['token']) && !empty($_GET['email']) && !empty($_GET['token'])) {
@@ -54,40 +54,37 @@ if (isset($_GET['email'], $_GET['token']) && !empty($_GET['email']) && !empty($_
 }
 ?>
 
-<body class="">
+<body>
     <main>
-        <div class="container">
-            <div class="contenue">
-                <div class="header">
-                    <?php if (isset($message)) echo htmlspecialchars($message); ?>
-                    <h3 class="">Réinitialisation du mot de passe</h3>
-                </div>
-                <div class="center">
-                    <div class="">Veuillez rentrer un nouveau mot de passe.</div>
-                    <form action="new_password.php?email=<?php echo urlencode($email); ?>&token=<?php echo urlencode($token); ?>" method="post">
-                        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
-                        <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
-                        <div class="deuxconteneur">
-                            <div class="">
-                                <div class="">
-                                    <input class="form-control" id="password" name="password" type="password" placeholder="Create a password" />
-                                    <label for="password">Mot de passe</label>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="">
-                                    <input class="form-control" id="confirm_password" name="confirm_password" type="password" placeholder="Confirm password" />
-                                    <label for="confirm_password">Confirmer le mot de passe</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <a class="small" href="login.php">Connexion</a>
-                            <input type="submit" name="new_password" class="btn btn-primary" value="Valider" />
-                        </div>
-                    </form>
-                </div>
+        <div class="center">
+            <div class="header">
+                <?php if (isset($message)) echo htmlspecialchars($message); ?>
+                <h3 class="titre">Réinitialisation du mot de passe</h3>
+                <p class="intro">Veuillez entrer un nouveau mot de passe.</p>
             </div>
+
+            <form action="new_password.php?email=<?php echo urlencode($email); ?>&token=<?php echo urlencode($token); ?>" method="post" class="formulaire">
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
+                <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
+
+                <div class="conteneur_element">
+                    <label for="password">Mot de passe</label>
+                    <input id="password" type="password" name="password" placeholder="Créer un mot de passe" required />
+                </div>
+
+                <div class="conteneur_element">
+                    <label for="confirm_password">Confirmer le mot de passe</label>
+                    <input id="confirm_password" type="password" name="confirm_password" placeholder="Confirmer le mot de passe" required />
+                </div>
+
+                <div class="btn-inscription">
+                    <input type="submit" name="new_password" class="btn-submit" value="Valider" />
+                </div>
+
+                <div class="footer">
+                    <a class="small" href="http://localhost/onligne_school/mon_enfant/login.php">← Retour à la connexion</a>
+                </div>
+            </form>
         </div>
     </main>
 </body>

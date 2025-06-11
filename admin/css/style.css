@@ -1,58 +1,321 @@
-/*Mise a jour general*/
-body{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/fond_et_illustraction/fond/fond.png);
-    background-size:cover;
 }
-main{
-    padding: 50px;
-    place-items: center;
-}
-/*fin mise a jour general*/
-.container{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    width: 70%;
-    padding: 20px;
-}
-.contenue{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
 }
-.contenue .header{
-    font-size: 30px;
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 600px;
+    padding: 100px;
+    width:70%;
+}
+.sibedar {
+    width: 300px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo {
     text-align: center;
 }
-.contenue .center form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.deuxconteneur{
-    display: flex;
-    gap: 30px;
-}
-.conteneur_element{
-    display: flex;
-    flex-direction: column;
 
+.photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 15px;
 }
-input{
-    width: 400px;
+.photo .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+}
+
+.photo .titre p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.ligne {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.ligne a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.703);
+    border-radius: 4px;
+    transition: background 0.3s;
 }
-input[type='email']{
-    width: 90%;
+
+.ligne a:hover {
+    background-color: #555;
+}
+
+.center {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h3 {
+    font-size: 24px;
+    color: #222;
+}
+
+.identite p {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+    background-color: #ffffff;
+    padding: 4px;
+    border: 1px solid #007bff;
+}
+
+.option {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.opt{
+    display: flex;
+    justify-content: space-between;
+}
+.option a.small {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    padding: 8px;
+    border-radius: 4px;
+    width: fit-content;
+    transition: background 0.3s, color 0.3s;
+}
+
+.option a.small:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+form .d-grid {
+    margin-top: 15px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkred;
+}
+.form-row{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.form-row input{
+   border: 1px solid #007bff;
+   padding: 5px;
+   width: 300px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 600px;
+    padding: 100px;
+    width:70%;
+}
+.sibedar {
+    width: 300px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+.photo .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+}
+
+.photo .titre p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.ligne {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.ligne a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.ligne a:hover {
+    background-color: #555;
+}
+
+.center {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h3 {
+    font-size: 24px;
+    color: #222;
+}
+
+.identite p {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+    background-color: #ffffff;
+    padding: 4px;
+    border: 1px solid #007bff;
+}
+
+.option {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.opt{
+    display: flex;
+    justify-content: space-between;
+}
+.option a.small {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    padding: 8px;
+    border-radius: 4px;
+    width: fit-content;
+    transition: background 0.3s, color 0.3s;
+}
+
+.option a.small:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+form .d-grid {
+    margin-top: 15px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkred;
+}
+.form-row{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.form-row input{
+   border: 1px solid #007bff;
+   padding: 5px;
+   width: 300px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
 }

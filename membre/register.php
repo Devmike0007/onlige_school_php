@@ -84,6 +84,7 @@
             }
 
             $requete->execute();
+            $message ="✅ Un mail vous a été envoyé.";
             require_once 'includes/PHPMailer/sendemail.php';
 
         }
@@ -150,7 +151,7 @@ require_once 'includes/header_register.php';
             </div>
 
             <div class="footer">
-                <p><a href="login.php">Vous avez déjà un compte ? Se connecter</a></p>
+                <p><a href="http://localhost/onligne_school/mon_enfant/login.php">Vous avez déjà un compte ? Se connecter</a></p>
             </div>
         </div>
     </main>

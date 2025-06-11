@@ -22,16 +22,17 @@ try {
     $mail->CharSet = 'UTF-8';
 
     // Expéditeur et destinataire
-    $mail->setFrom('onligneschool@gmail.com', 'Onligne_School');
+    $mail->setFrom('espoircompagnie0001@gmail.com', 'Michee');
     $mail->addAddress($_POST['email'],'');
 
     // Contenu
     $mail->isHTML(true);
     $mail->Subject = 'Confirmation d\'email';
-    $mail->Body = 'Afin de réintialiser votre mot de passe , merci de cliqquer sur le lien suivant : <a href="localhost/onligne_school/admin/new_password.php?token='.$token.'&email='.$_POST['email'].'">Réinitialiser le mot de passe</a>';
+    $mail->Body = 'Afin de réintialiser votre mot de passe , merci de cliqquer sur le lien suivant : <a href="localhost/onligne_school/membre/new_password.php?token='.$token.'&email='.$_POST['email'].'">Réinitialiser le mot de passe</a>';
 
     // Envoi
     $mail->send();
+    echo '✅ Un mail vous a été envoyé pour la reinitialisation de votre mot de paasse.';
 } catch (Exception $e) {
     echo '❌ Erreur lors de l\'envoi : ' . $mail->ErrorInfo;
 }
