@@ -1,5 +1,7 @@
 <?php 
 
+
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -22,28 +24,15 @@ try {
     $mail->CharSet = 'UTF-8';
 
     // Expéditeur et destinataire
-    $mail->setFrom('espoircompagnie0001@gmail.com', 'Michee');
-    $mail->addAddress($_POST['email'],'');
+    $mail->setFrom($_POST['email'], $_POST['nom']);
+    $mail->addReplyTo($_POST['email'], $_POST['nom']);
+    $mail->addAddress('onligneschool@gmail.com', 'Onligne_School'); // Adresse du destinataire
 
     // Contenu
-    $link = 'http://localhost/onligne_school/membre/verification.php?token=' . urlencode($token) . '&email=' . urlencode($_POST['email']);
-
     $mail->isHTML(true);
-    $mail->Subject = 'Confirmation de votre adresse email';
+    $mail->Subject = "INFORMATION SUR L'ECOLE";
+    $mail->Body = $_POST['message'];
 
-    $mail->Body = '
-        <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
-            <h2 style="color: #2c77f0;">Confirmation de votre adresse email</h2>
-            <p>Bonjour,</p>
-            <p>Merci de vous être inscrit. Pour finaliser votre inscription, veuillez confirmer votre adresse email en cliquant sur le bouton ci-dessous :</p>
-            <p style="margin: 20px 0;">
-                <a href="' . $link . '" style="background-color: #2c77f0; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
-                    Confirmer votre email
-                </a>
-            </p>
-            <p>Si vous n\'avez pas demandé cette inscription, vous pouvez ignorer ce message.</p>
-            <p style="margin-top: 30px;">Cordialement,<br>L’équipe de votre école</p>
-        </div>';
     // Envoi
     $mail->send();
 } catch (Exception $e) {
