@@ -28,6 +28,12 @@
                 <div class="balise un">
                     <a href="galerie.php">
                         <i class="fa-solid fa-child"></i> <!-- icône enfant -->
+                        <p>Article</p>
+                    </a>
+                </div>
+                <div class="balise un">
+                    <a href="galerie.php">
+                        <i class="fa-solid fa-child"></i> <!-- icône enfant -->
                         <p>Galerie</p>
                     </a>
                 </div>

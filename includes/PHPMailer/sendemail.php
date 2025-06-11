@@ -36,6 +36,10 @@ try {
     // Envoi
     $mail->send();
 } catch (Exception $e) {
-    echo '❌ Erreur lors de l\'envoi : ' . $mail->ErrorInfo;
-}
+     echo "<script type=\"text/javascript\">
+    alert('❌ Erreur lors de l\'envoi :  !!');
+    document.location.href='http://localhost/onligne_school/index.php';
+    </script>";
+    }
+
 ?>

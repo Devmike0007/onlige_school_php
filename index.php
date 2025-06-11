@@ -1,28 +1,4 @@
-<?php
-    if(isset($_POST['envoyer'])){
-        if(empty($_POST['nom'])){
-            echo "<script>alert('Veuillez saisir votre nom !');</script>";
-        }
-        if(empty($_POST['prenom'])){
-            echo "<script>alert('Veuillez saisir votre nom !');</script>";
-        }
-        elseif(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-            echo "Veuillez saisir votre email !";
-        }
-        elseif(empty($_POST['message'])){
-            echo "Veuillez saisir votre message !";
-        }
-        else{
-            require_once 'includes/PHPMailer/sendemail.php';
 
-        }
-
-    }
-    else{
-        echo "Il faut valider votre formulaire";
-    }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -263,7 +239,7 @@
                 <img src="./images/Personnages/accueil/Teaching Pictures _ Freepik.jpeg" alt="">
             </div>
             <div class="droite">
-                <form action="index.php" method="post">
+                <form action="includes/traitement.php" method="post">
                     <h1>Contactez-nous</h1>
                     <div class="nom_post">
                         <div class="nom">
