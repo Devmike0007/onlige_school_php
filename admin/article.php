@@ -169,7 +169,7 @@ if (isset($_POST['valider'])) {
                         echo "<td>{$ligne['description_post']}</td>";
                         echo "<td><a href='{$ligne['lien_post']}' target='_blank'>Voir</a></td>";
                         echo "<td><a href='modifier_article.php?id_post={$ligne['id_post']}'>Modifier</a></td>";
-                        echo "<td><a href='supprime_article.php?id_post={$ligne['id_post']}'>Supprimer</a></td>";
+                        echo "<td><a href='supprimer_article.php?id_post={$ligne['id_post']}'>Supprimer</a></td>";
                         echo "</tr>";
                     }
                     $result->closeCursor();
