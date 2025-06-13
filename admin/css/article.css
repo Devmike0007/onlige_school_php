@@ -1,0 +1,152 @@
+.article {
+    display: flex;
+    flex-direction: column;
+}
+
+.inscription_article {
+  width: 90%;
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+}
+
+.inscription_article form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+  background-color: #ffffffb6;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.inscription_article form h1{
+  font-size: 15px;
+}
+
+.grandlien {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.box {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.box input[type="text"],
+.box input[type="date"],
+.box input[type="file"],
+.box textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.box input:focus,
+.box textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+.box textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Bouton de soumission stylisé */
+.box input[type="submit"] {
+  padding: 14px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 20px;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #34495e;
+  transform: scale(1.02);
+}
+
+
+.affiche_article {
+    width: 90%;
+    max-width: 1200px; /* limite largeur max */
+    padding: 30px;
+    background-color: #f9f9f91a;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow-x: auto; /* ajout scroll horizontal si besoin */
+}
+
+
+.affiche_article h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.affiche_article h4 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.affiche_article table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.affiche_article table th,
+.affiche_article table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.affiche_article table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+.affiche_article table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.affiche_article table td a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.affiche_article table td a:hover {
+    color: #1d6fa5;
+}
