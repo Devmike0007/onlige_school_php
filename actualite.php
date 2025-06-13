@@ -82,12 +82,23 @@
             <h1><span>Section Galerie 📸</span><br>
                 Moments forts en images</h1>
             <div class="conteneur">
-                <div class="galerie">
+            <?php
+                    $requete = "SELECT * FROM galeries ORDER BY id_galerie ASC";
+                    $result = $bdd->query($requete);
+                    if (!$result){
+                        echo "la recuperation des donnees a echoue";
+                    }
+                    else{
+                        while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
+                            $titre_galerie =$ligne['titre_galerie'];
+                            $description_galerie = $ligne['description_galerie'];
+                            $lien_galerie = $ligne['lien_galerie'];
+                    ?>
+                    <div class="galerie">
                     <div class="tranp">
                         <div class="conten">
-                            <h1>Sport et compétition</h1>
-                            <p>Nos équipes en pleine action lors des tournois interscolaires, 
-                                avec interviews exclusives des joueurs et coachs.</p>
+                            <h1> <?php echo $titre_galerie ?></h1>
+                            <p> <?php echo $description_galerie ?> </p>
                             <div class="telechargement">
                                 <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
                                 <p> Télécharger le pack </p>
@@ -95,121 +106,20 @@
                         </div>
                     </div>
                     <div class="images">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
+                        <?php
+                        for ($i = 1; $i <= 6; $i++) {
+                                echo "<img src='admin/img/photo_galerie/{$ligne['image_galerie' . $i]}' alt='photo'>";
+                            }
+                            ?>
+                       
                     </div>
                 </div>
-                <div class="galerie">
-                    <div class="tranp">
-                        <div class="conten">
-                            <h1>Sport et compétition</h1>
-                            <p>Nos équipes en pleine action lors des tournois interscolaires, 
-                                avec interviews exclusives des joueurs et coachs.</p>
-                            <div class="telechargement">
-                                <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
-                                <p> Télécharger le pack </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="images">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                    </div>
-                </div>
-                <div class="galerie">
-                    <div class="tranp">
-                        <div class="conten">
-                            <h1>Sport et compétition</h1>
-                            <p>Nos équipes en pleine action lors des tournois interscolaires, 
-                                avec interviews exclusives des joueurs et coachs.</p>
-                            <div class="telechargement">
-                                <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
-                                <p> Télécharger le pack </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="images">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                    </div>
-                </div>
-                <div class="galerie">
-                    <div class="tranp">
-                        <div class="conten">
-                            <h1>Sport et compétition</h1>
-                            <p>Nos équipes en pleine action lors des tournois interscolaires, 
-                                avec interviews exclusives des joueurs et coachs.</p>
-                            <div class="telechargement">
-                                <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
-                                <p> Télécharger le pack </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="images">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                    </div>
-                </div>
-                <div class="galerie">
-                    <div class="tranp">
-                        <div class="conten">
-                            <h1>Sport et compétition</h1>
-                            <p>Nos équipes en pleine action lors des tournois interscolaires, 
-                                avec interviews exclusives des joueurs et coachs.</p>
-                            <div class="telechargement">
-                                <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
-                                <p> Télécharger le pack </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="images">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                    </div>
-                </div>
-                <div class="galerie">
-                    <div class="tranp">
-                        <div class="conten">
-                            <h1>Sport et compétition</h1>
-                            <p>Nos équipes en pleine action lors des tournois interscolaires, 
-                                avec interviews exclusives des joueurs et coachs.</p>
-                            <div class="telechargement">
-                                <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
-                                <p> Télécharger le pack </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="images">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                        <img src="./images/Personnages/photoActulite/galerie/sport/Life in the City - Abuja.jpeg" alt="sport">
-                    </div>
-                </div>
-            </div>
-            
+            </div>  
+                                   
+  <?php 
+   }
+}
+?>
         </section>
     </main>
 
