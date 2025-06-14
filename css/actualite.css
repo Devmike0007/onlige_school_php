@@ -129,7 +129,7 @@ header{
     justify-content: space-around;
     align-items: center;
     padding: 10px 10px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 6, 0.256);
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
 }
 .photo_de_larticle{
     height: 400px;
@@ -174,6 +174,11 @@ header{
     align-items: center;
     gap: 10px;
     float: left;
+    text-decoration: none;
+}
+.telecharger a{
+    text-decoration: none;
+    color: #111;
 }
 .icon{
     height: 100%;
@@ -193,81 +198,167 @@ header{
 }
 /*actualite fin*/
 
-.Galerie{
+.Galerie {
     margin-top: 50px;
-
     width: 100%;
+    padding: 0 5vw;
+    box-sizing: border-box;
 }
-.Galerie h1{
-    margin-bottom: 50px ;
+.Galerie h1 {
+    margin-bottom: 40px;
     font-size: 48px;
 }
-.Galerie h1 span{
-    font-weight: mormal;
+.Galerie h1 span {
+    font-weight: normal;
     font-size: 40px;
 }
 
-.galerie .tranp{
-    position: absolute;
-    background-image: url(/images/Personnages/photoActulite/fond.png);
-    background-size: cover;
-    margin-top: 0px;
-    left: 115px;
-    height: 83%;
-    width: 90%;
-    
+.galerie {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    overflow: hidden; /* Ajouté pour éviter le dépassement */
 }
-.galerie .tranp .conten{
+.galerie .tranp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.95) 40%, rgba(255, 255, 255, 0) 100%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    pointer-events: none; /* Pour éviter de bloquer les interactions sur les images */
+}
+.galerie .tranp .conten {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
-    margin-left: 50px;
-    height: 100%;
+    gap: 18px;
+    margin-left: 60px;
     width: 50%;
-    
+    max-width: 500px;
+    pointer-events: auto; /* Pour permettre les interactions sur le contenu */
+    text-align: left;
 }
-.galerie .tranp h1{
-    margin: 0;
-}
-.galerie .tranp p{
-    font-size: 30px;
-    width: 45%;
-}
-.galerie .tranp .telechargement{
-    background-color: black;
-    display: flex;
-    gap: 20%;
-    align-items: center;
+#texter{
     width: 300px;
-    height: 40px;
-    padding: 0 20px;
 }
-.galerie .tranp .telechargement:hover{
-    background-color: white;
-    transition: 0.5s;
+.galerie .tranp h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: left;
 }
-.galerie .tranp .telechargement img{
-    height: 20px;
-}
-.galerie .tranp .telechargement p{
-    color: white;
-    font-size: 20px;
+.galerie .tranp p {
+    font-size: 22px;
     width: 100%;
+    color: #222;
+    opacity: 0.85;
+    text-align: left;
 }
-.galerie .images{
+.galerie .tranp .telechargement {
+    background-color: #111;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    width: fit-content;
+    min-width: 200px;
+    height: 44px;
+    padding: 0 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    pointer-events: auto;
+    text-decoration: none;
+}
+.galerie .tranp .telechargement:hover {
+    background-color: #fff;
+    border: 1px solid #111;
+}
+.galerie .tranp .telechargement img {
+    height: 22px;
+    filter: invert(1);
+    transition: filter 0.3s;
+}
+.galerie .tranp .telechargement:hover img {
+    filter: invert(0);
+}
+.galerie .tranp .telechargement p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    transition: color 0.3s;
+}
+.galerie .tranp .telechargement:hover p {
+    color: #111;
+}
+.galerie .images {
     display: flex;
     flex-wrap: wrap;
+    gap: 18px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
-    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    overflow: hidden; /* Ajouté pour éviter le dépassement */
 }
-.galerie .images img{
-    height: 300px;
+.galerie .images img {
+    width: 260px;
+    height: 200px;
     object-fit: cover;
-
-
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 100%; /* Ajouté pour éviter le dépassement */
+    max-height: 100%; /* Ajouté pour éviter le dépassement */
+}
+.galerie .images img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
+@media (max-width: 900px) {
+    .galerie .tranp .conten {
+        margin-left: 20px;
+        width: 80%;
+        max-width: none;
+    }
+    .galerie .images img {
+        width: 45vw;
+        height: 28vw;
+        min-width: 140px;
+        min-height: 100px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .Galerie h1 {
+        font-size: 32px;
+    }
+    .galerie .tranp .conten {
+        margin-left: 10px;
+        width: 95%;
+    }
+    .galerie .tranp h1 {
+        font-size: 22px;
+    }
+    .galerie .tranp p {
+        font-size: 15px;
+    }
+    .galerie .images img {
+        width: 90vw;
+        height: 40vw;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
 
  /* footer */
  footer{

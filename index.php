@@ -71,7 +71,7 @@
                         <a href="./doc/📝 Liste de Fournitures Scolaires.pdf"></a>
                             <div class="telecharger">
                                     <div class="icon"><img src="./images/fond_et_illustraction/illustration/telecharger.png" alt=""></div>
-                                    <p> <a href="./doc/📝 Liste de Fournitures Scolaires.pdf">telecharger</a> </p>
+                                    <p> <a href="<?php echo $lien_article; ?>"> Lien</a> </p>
                             </div>
                         </a>
                         <div class="autr">

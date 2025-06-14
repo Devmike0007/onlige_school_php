@@ -218,7 +218,15 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+    color: black;
     float: left;
+}
+.telecharger a{
+    
+    text-decoration: none;
+    color: black;
+    
 }
 .icon{
     height: 100%;
@@ -385,7 +393,7 @@ header{
 /*fin contact*/
 /*barre slog*/
 .bareinscription{
-    background-image: url(/images/fond_et_illustraction/fond/Bande_iscription.png);
+    background-image: url(../images/fond_et_illustraction/fond/Bande_iscription.png);
     background-repeat: no-repeat;
     height: 236px;
     margin-top: 50px;

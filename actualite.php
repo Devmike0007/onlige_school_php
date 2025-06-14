@@ -45,6 +45,7 @@
                             $date_article = $ligne['date_post'];
                             $image_article = $ligne['image_post'];
                             $description_article =$ligne['description_post'];
+                            $lien_article =$ligne['lien_post'];
                             
                        
 
@@ -65,7 +66,7 @@
                         <a href="./doc/📝 Liste de Fournitures Scolaires.pdf"></a>
                             <div class="telecharger">
                                     <div class="icon"><img src="./images/fond_et_illustraction/illustration/telecharger.png" alt=""></div>
-                                    <p> <a href="./doc/📝 Liste de Fournitures Scolaires.pdf">telecharger</a> </p>
+                                    <p> <a href="<?php echo $lien_article; ?>">Lien</a> </p>
                             </div>
                         </a>
                         <div class="autr">
@@ -82,36 +83,44 @@
             <h1><span>Section Galerie 📸</span><br>
                 Moments forts en images</h1>
             <div class="conteneur">
-            <?php
-                    $requete = "SELECT * FROM galeries ORDER BY id_galerie ASC";
-                    $result = $bdd->query($requete);
-                    if (!$result){
-                        echo "la recuperation des donnees a echoue";
-                    }
-                    else{
-                        while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
-                            $titre_galerie =$ligne['titre_galerie'];
-                            $description_galerie = $ligne['description_galerie'];
-                            $lien_galerie = $ligne['lien_galerie'];
-                    ?>
+                <?php
+                        $requete = "SELECT * FROM galeries ORDER BY id_galerie ASC";
+                        $result = $bdd->query($requete);
+                        if (!$result){
+                            echo "la recuperation des donnees a echoue";
+                        }
+                        else{
+                            while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
+                                $titre_galerie =$ligne['titre_galerie'];
+                                $description_galerie = $ligne['description_galerie'];
+                                $lien_galerie = $ligne['lien_galerie'];
+                ?>
                     <div class="galerie">
                     <div class="tranp">
                         <div class="conten">
                             <h1> <?php echo $titre_galerie ?></h1>
-                            <p> <?php echo $description_galerie ?> </p>
-                            <div class="telechargement">
+                            <p id="texter"> <?php echo $description_galerie ?> </p>
+                            <a href="<?php echo $lien_galerie; ?>" class="telechargement">
                                 <img src="./images/fond_et_illustraction/illustration/telechargements.png" alt="">
                                 <p> Télécharger le pack </p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="images">
-                        <?php
-                        for ($i = 1; $i <= 6; $i++) {
-                                echo "<img src='admin/img/photo_galerie/{$ligne['image_galerie' . $i]}' alt='photo'>";
-                            }
+                        <div class="top">
+                            <?php
+                                for ($i = 4; $i <= 6; $i++) {
+                                        echo "<img src='admin/img/photo_galerie/{$ligne['image_galerie' . $i]}' alt='photo'>";
+                                    }
                             ?>
-                       
+                        </div>
+                        <div class="bottom">
+                            <?php
+                                for ($i = 1; $i <= 3; $i++) {
+                                        echo "<img src='admin/img/photo_galerie/{$ligne['image_galerie' . $i]}' alt='photo'>";
+                                    }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>  
