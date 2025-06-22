@@ -19,25 +19,19 @@ require_once 'includes/bdd.php';
                     <p>Tableau de bord</p>
                 </a>
             </div>
-            <div class="balise un">
-                <a href="matiere.php">
-                    <i class="fa-solid fa-child"></i> <!-- icône enfant -->
-                    <p>Matierè</p>
-                </a>s
-            </div>
-            <div class="balise un">
+            <div class="balise">
                 <a href="article.php">
                     <i class="fa-solid fa-child"></i> <!-- icône enfant -->
                     <p>Article</p>
                 </a>
             </div>
-            <div class="balise un">
+            <div class="balise ">
                 <a href="galerie.php">
                     <i class="fa-solid fa-child"></i> <!-- icône enfant -->
                     <p>Galerie</p>
                 </a>
             </div>
-            <div class="balise un">
+            <div class="balise">
                 <a href="http://localhost/onligne_school/membre/register.php">
                     <i class="fa-solid fa-child"></i> <!-- icône enfant -->
                     <p>Ajouter le membre</p>

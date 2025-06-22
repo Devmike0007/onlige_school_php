@@ -9,6 +9,9 @@ body{
 }
 main{
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 /*fin mise a jour general*/
 
@@ -152,7 +155,7 @@ header{
 
 /*Actualite*/
 .actualite{
-    margin-top: 250px;
+    height: auto;
     width: 100%;
 }
 .actualite h1{
@@ -248,9 +251,9 @@ header{
 
 /*Apropos*/
 .Apropos{
-    margin-top: 350px;
-    height: 250px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 .Apropos .gauche h1{
@@ -282,8 +285,8 @@ header{
 /*fin Apropos*/
 /*temoignage*/
 .temoignage{
-    width: 100;
-    margin-top: 250px;
+    width: 100%;
+    height: auto;
 }
 .temoignage h1{
     font-size: 42px;
@@ -329,8 +332,7 @@ header{
 /*temoignage fin*/
 /*contact*/
 .contact{
-    margin-top: 200px;
-    height: 700px;
+    height: auto;
     background-color: white;
     display: flex;
     gap: 50px;
@@ -488,3 +490,60 @@ footer .conteneurf{
     color: black;
 }
 /*footer fin*/
+@media only screen and (max-width: 600px) {
+    main{
+    padding: 20px;
+    gap: 20px;
+}
+    .barblanche nav ul{
+    display: none;
+    list-style: none;
+    gap: 25px;
+}
+/*gauche*/
+.gauche {
+    float: left;
+    width: 100%;
+}
+/*droite*/
+.droite{
+    display: none;
+    float: right;
+    width: 40%;
+    height: 115%;
+}
+.Apropos .droite{
+  display: none;
+}
+.contact .gauche{
+    display: none;
+}
+.bareinscription{
+    height: auto;
+    margin: 0;
+
+   
+}
+.bareinscription .text{
+    width: 100%;
+    padding: 0;
+}
+.bareinscription .text p{
+    width: 100%;
+    padding: 0;
+}
+footer{
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+footer .conteneurf{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    padding: 0px;
+}
+}

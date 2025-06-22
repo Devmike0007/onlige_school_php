@@ -12,7 +12,7 @@ main{
     flex-wrap: wrap;
 }
 .gauche{
-    width: 50%;
+    
     height: 100vh;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -55,7 +55,6 @@ main{
 }
 
 .droite{
-    width: 50%;
     height: 100vh;
     display: flex;
     flex-direction: column;

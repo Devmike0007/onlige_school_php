@@ -56,31 +56,26 @@ if (isset($_POST['valider'])) {
             </div>
         </div>
         <div class="center">
-            <div class="balise un">
+            <div class="balise">
                 <a href="index.php">
                     <i class="fa-solid fa-child"></i>
                     <p>Tableau de bord</p>
                 </a>
             </div>
+
             <div class="balise un">
-                <a href="matiere.php">
-                    <i class="fa-solid fa-book"></i>
-                    <p>Matière</p>
-                </a>
-            </div>
-            <div class="balise un">
-                <a href="galerie.php">
+                <a href="article.php">
                     <i class="fa-solid fa-newspaper"></i>
                     <p>Article</p>
                 </a>
             </div>
-            <div class="balise un">
+            <div class="balise">
                 <a href="galerie.php">
                     <i class="fa-solid fa-image"></i>
                     <p>Galerie</p>
                 </a>
             </div>
-            <div class="balise un">
+            <div class="balise">
                 <a href="http://localhost/onligne_school/membre/register.php">
                     <i class="fa-solid fa-user-plus"></i>
                     <p>Ajouter le membre</p>

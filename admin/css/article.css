@@ -1,6 +1,7 @@
 .article {
     display: flex;
     flex-direction: column;
+
 }
 
 .inscription_article {
@@ -15,11 +16,10 @@
 .inscription_article form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
   padding: 30px;
   background-color: #ffffffb6;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .inscription_article form h1{
   font-size: 15px;
@@ -29,7 +29,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
 .box {
@@ -50,7 +51,7 @@
 .box input[type="date"],
 .box input[type="file"],
 .box textarea {
-  padding: 12px 14px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 15px;

@@ -339,25 +339,7 @@ header{
     }
 }
 @media (max-width: 600px) {
-    .Galerie h1 {
-        font-size: 32px;
-    }
-    .galerie .tranp .conten {
-        margin-left: 10px;
-        width: 95%;
-    }
-    .galerie .tranp h1 {
-        font-size: 22px;
-    }
-    .galerie .tranp p {
-        font-size: 15px;
-    }
-    .galerie .images img {
-        width: 90vw;
-        height: 40vw;
-        max-width: 100%;
-        max-height: 100%;
-    }
+   
 }
 
  /* footer */
@@ -430,4 +412,65 @@ footer .conteneurf{
     color: black;
 }
 /*footer fin*/
-    
+@media only screen and (max-width: 600px) {
+    main{
+    padding: 20px;
+    gap: 20px;
+}
+    .barblanche nav ul{
+    display: none;
+    list-style: none;
+    gap: 25px;
+}
+/*gauche*/
+.gauche {
+    float: left;
+    width: 100%;
+}
+/*droite*/
+.droite{
+    display: none;
+    float: right;
+    width: 40%;
+    height: 115%;
+}
+.Apropos .droite{
+  display: none;
+}
+.contact .gauche{
+    display: none;
+}
+.Galerie h1 {
+    font-size: 32px;
+}
+.galerie .tranp .conten {
+    margin-left: 10px;
+    width: 95%;
+}
+.galerie .tranp h1 {
+    font-size: 22px;
+}
+.galerie .tranp p {
+    font-size: 15px;
+}
+.galerie .images img {
+    width: 90vw;
+    height: 40vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+footer{
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+footer .conteneurf{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    padding: 0px;
+}
+}

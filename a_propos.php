@@ -157,35 +157,6 @@
             </div>
             <p>Notre engagement est de fournir un cadre éducatif qui allie savoir, discipline et innovation, afin de préparer nos élèves à devenir des citoyens responsables, curieux et ambitieux, prêts à relever les défis de demain.</p>
         </section>
-        <section class="contact">
-            <div class="gauche">
-                <img src="./images/Personnages/accueil/Teaching Pictures _ Freepik.jpeg" alt="">
-            </div>
-            <div class="droite">
-                <form action="">
-                    <h1>Contactez-nous</h1>
-                    <div class="nom_post">
-                        <div class="nom">
-                            <label for="">Nom</label>
-                            <input type="text" placeholder="Nom" required>
-                        </div>
-                        <div class="post">
-                            <label for="">Post nom</label>
-                            <input type="text" placeholder="Post-nom" required>
-                        </div>
-                    </div>
-                    <div class="email">
-                        <label for="">Email address</label>
-                        <input type="email" name="email" id="" placeholder="email@janesfakedomain.net" required>
-                    </div>
-                    <div class="message">
-                        <label for="">Votre message</label>
-                        <textarea name="message" id="message" placeholder="Enter your question or message" required></textarea>
-                    </div>
-                    <input type="submit" placeholder="Envoyer">
-                </form>
-            </div>
-        </section>
     </main>
     <?php require_once 'includes/footer.php'; ?>
     
