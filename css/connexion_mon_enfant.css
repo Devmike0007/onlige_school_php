@@ -214,10 +214,56 @@ footer{
 footer .conteneurf{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
-    width: 90%;
+    width: 100%;
     padding: 0px;
+}
+.conteneurf .gauche {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    color: black;
+}
+.conteneurf .gauche .logo{
+    position: relative;
+    height: 100px;
+    background-color: black;
+    top: 55px;
+}
+.conteneurf .gauche .logo img{
+    height: 40%;
+}
+.conteneurf .gauche .resaux{
+
+    position: relative;
+    top: 10px;
+    left: 30px;
+    display: flex;
+    
+}
+.conteneurf .gauche .resaux img{
+    height: 100%;
+}
+.conteneurf .centre {
+    height: 90%;
+    width: 100%;
+    text-align: center;
+    color: black;
+   
+}
+.conteneurf .droite{
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    color: black;
+}
+.conteneurf .horaire{
+    height: 90%;
+    width: 100%;
+    padding-right: 35px;
+    text-align: center;
+    color: black; 
 }
 }
