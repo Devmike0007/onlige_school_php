@@ -37,12 +37,6 @@
     width: 30px;
 }
 
-.barblanche nav ul {
-
-}
-.barblanche nav ul li a {
-    color: #333;
-}
 
 /* --- RESPONSIVE --- */
 @media screen and (max-width: 600px) {
