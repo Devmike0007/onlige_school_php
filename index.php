@@ -18,7 +18,7 @@
                 <p>Un cadre inspirant, des programmes adaptés, 
                     une réussite assurée. Ensemble, cultivons l’avenir !</p>
                 <div class="bouton">
-                    <a href="#">Inscription</a>
+                    <a href="MES RESULTATS SUR CISNET.pdf" download>Inscription</a>
                 </div>
             </div>
             <div class="droite">
@@ -27,14 +27,8 @@
                 </div>
             </div>
         </section>
-        <div class="barre_de_navigation">
-            <ul>
-                <li><a href="#actualite">Actualité</a></li>
-                <li><a href="#Apropos">A propos</a></li>
-                <li><a href="#temoignage">Temoinagnage</a></li>
-                <li><a href="#contact">Contacte</a></li>
-            </ul>
-        </div>
+
+        
         <section class="actualite" id="actualite">
             <h1>Actualité</h1>
             <div class="conteneur">

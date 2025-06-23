@@ -12,7 +12,7 @@ main{
     flex-wrap: wrap;
 }
 .gauche{
-    
+    width: 50%;
     height: 100vh;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -55,6 +55,7 @@ main{
 }
 
 .droite{
+    width: 50%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -161,4 +162,25 @@ button:active{
     width: 20px;
     height: 20px;
     margin-left: 10px;
+}
+@media only screen and (max-width: 600px) {
+    main{
+    padding: 0px;
+    gap: 0px;
+    flex-direction: column;
+}
+.gauche{
+    width: 100%;
+}
+.droite{
+    width: 100%;
+}
+button{
+    margin-top: 20px;
+}
+.mot_de_passe_oublie {
+    position: relative;
+    left: 0;
+    width: 100%;
+}
 }
